@@ -6,32 +6,17 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import Header from './Header';
 import MainFeaturedPost from './MainFeaturedPost';
 import FeaturedPost from './FeaturedPost';
-import Main from './Main';
-import Sidebar from './Sidebar';
-import Footer from './Footer';
-import { useState } from 'react';
 
 
-const sections = [
-  { title: 'Overview', url: '#' },
-  { title: 'Cirriculum Vitae', url: '#' },
-  { title: 'Culture', url: '#' },
-  { title: 'Business', url: '#' },
-  { title: 'Politics', url: '#' },
-  { title: 'Opinion', url: '#' },
-  { title: 'Science', url: '#' },
-  { title: 'Health', url: '#' },
-  { title: 'Style', url: '#' },
-  { title: 'Travel', url: '#' },
-];
+
+
 
 const mainFeaturedPost = {
   title: 'Welcome to Lugar\'s Researcher Page!',
   description:
-    "This is a place where you can find about me as a researcher. I am now a undergraduate student in the School of Computer Science, Peking University. ",
+    "This is a platform where you can learn more about me as a researcher.\nI am currently an undergraduate student affiliated with the School of Computer Science at Peking University.",
   image: 'https://source.unsplash.com/random?wallpapers',
   imageText: 'main image description',
   linkText: 'Continue reading…',
@@ -55,29 +40,6 @@ const featuredPosts = [
     imageLabel: 'Image Text',
   },
 ];
-
-const posts_add = ["./blog-post.1.md", "./blog-post.2.md", "./blog-post.3.md"];
-
-async function Read_markdown(adds: string[]) {
-  const ret: string[] = [];
-  
-  for (const add of adds) {
-    await fetch(add)
-      .then(res => res.text())
-      .then(text => {
-        ret.push(text);
-      })
-      .catch(error => {
-        console.error(`Error fetching ${add}: ${error}`);
-      });
-  }
-  
-  console.log(ret);
-  return ret;
-}
-
-const posts = Read_markdown(posts_add);
-
 
 const sidebar = {
   title: 'About',
@@ -103,15 +65,10 @@ const sidebar = {
   ],
 };
 
-// TODO remove, this demo shouldn't need to reset the theme.
-const defaultTheme = createTheme();
 
-export default function Blog() {
+
+export default function Overview() {
   return (
-    <ThemeProvider theme={defaultTheme}>
-      <CssBaseline />
-      <Container maxWidth="lg">
-        <Header title="Lugar Zou" sections={sections} />
         <main>
           <MainFeaturedPost post={mainFeaturedPost} />
           <Grid container spacing={4}>
@@ -129,11 +86,5 @@ export default function Blog() {
             />
           </Grid> */}
         </main>
-      </Container>
-      <Footer
-        title="Footer"
-        description="Something here to give the footer a purpose!"
-      />
-    </ThemeProvider>
   );
 }

@@ -7,7 +7,6 @@ import Box from '@mui/material/Box';
 interface MainFeaturedPostProps {
   post: {
     description: string;
-    image: string;
     imageText: string;
     linkText: string;
     title: string;
@@ -21,17 +20,14 @@ export default function MainFeaturedPost(props: MainFeaturedPostProps) {
     <Paper
       sx={{
         position: 'relative',
-        backgroundColor: 'grey.800',
+        backgroundColor: 'transparent',
         color: '#fff',
         mb: 4,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
-        backgroundImage: `url(${post.image})`,
       }}
     >
-      {/* Increase the priority of the hero background image */}
-      {<img style={{ display: 'none' }} src={post.image} alt={post.imageText} />}
       <Box
         sx={{
           position: 'absolute',
@@ -54,7 +50,7 @@ export default function MainFeaturedPost(props: MainFeaturedPostProps) {
             <Typography component="h1" variant="h3" color="inherit" gutterBottom>
               {post.title}
             </Typography>
-            <Typography variant="h5" color="inherit" paragraph>
+            <Typography variant="h5" color="inherit" sx={{ whiteSpace: 'pre-line' }} paragraph>
               {post.description}
             </Typography>
           </Box>

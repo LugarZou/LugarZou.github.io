@@ -8,6 +8,7 @@ import {
 import Root from './Root/Root';
 import CV from './Content/CV/CV';
 import Overview from './Content/Overview/Overview';
+import Showcase from './Content/Showcase/Showcase';
 
 const AppRouter = createBrowserRouter([
     {
@@ -22,10 +23,12 @@ const AppRouter = createBrowserRouter([
                 path: "/",
                 element: <Overview />,
             },
+            {
+                path: "Showcase",
+                element: <Showcase />,
+            },
         ],    
     },
 ]);
-
-
 
 export default AppRouter;

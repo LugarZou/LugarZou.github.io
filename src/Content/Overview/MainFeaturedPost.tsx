@@ -47,10 +47,10 @@ export default function MainFeaturedPost(props: MainFeaturedPostProps) {
               pr: { md: 0 },
             }}
           >
-            <Typography component="h1" variant="h3" color="inherit" gutterBottom>
+            <Typography component="h1" variant="h3" color="inherit" sx={{fontFamily:"Helvetica Neue" }} gutterBottom>
               {post.title}
             </Typography>
-            <Typography variant="h5" color="inherit" sx={{ whiteSpace: 'pre-line' }} paragraph>
+            <Typography variant="h5" color="inherit" sx={{ whiteSpace: 'pre-line', fontFamily:"sans-serif" }} paragraph>
               {post.description}
             </Typography>
           </Box>

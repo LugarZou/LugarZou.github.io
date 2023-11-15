@@ -1,63 +1,221 @@
 import * as React from 'react';
-import CssBaseline from '@mui/material/CssBaseline';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import Container from '@mui/material/Container';
-import { Typography } from '@mui/material';
-import GitHubIcon from '@mui/icons-material/GitHub';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
+import { Typography, ThemeProvider, createTheme } from '@mui/material';
 import { styled } from '@mui/material/styles';
+import { EducationTimeline, ResearchTimeline } from './CVtimeline';
+import FeaturedPost from './PubPost';
+import RewardList from './RewardList';
+import LanguageList from './LanguageList';
+
+import SchoolIcon from '@mui/icons-material/School';
+import BiotechIcon from '@mui/icons-material/Biotech';
+import HistoryEduIcon from '@mui/icons-material/HistoryEdu';
+import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
+import EmailIcon from '@mui/icons-material/Email';
+import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
+import TranslateIcon from '@mui/icons-material/Translate';
+
+const theme = createTheme({
+    typography: {
+        subtitle1: {
+            fontFamily: 'Times New Roman',
+            fontSize: 18,
+            // Other typography properties can be set here as well
+        },
+        h2: {
+            fontFamily: 'Playfair Display',
+            fontSize: 60,
+        },
+        h4: {
+            fontFamily: 'Times New Roman',
+            fontSize: 40,
+        },
+        h5: {
+            fontFamily: 'Times New Roman',
+            fontSize: 30,
+        },
+        h6: {
+            fontFamily: 'Times New Roman',
+            fontSize: 22,
+        },
+        body1: {
+            fontFamily: 'Times New Roman',
+        },
+        body2: {
+            fontFamily: 'Times New Roman',
+        },
+        button: {
+            fontFamily: 'Times New Roman',
+            fontSize: 16,
+        },
+    },
+});
 
 const UnderPaper = styled(Paper)(({ theme }) => ({
-    width: 1000,
+    overflow: 'auto',
+    maxHeight: "85vh",
     padding: theme.spacing(2),
     ...theme.typography.body2,
 
 }));
 
+const PubPosts = [
+    {
+        title: 'RDBench: ML Benchmark For Relational Databases',
+        author_before: 'Zizhao Zhang*, Yi Yang*, ',
+        author_me: "Lutong Zou*",
+        author_after: ", He Wen*, Tao Feng, Jiaxuan You",
+        description:
+            'We introduce RDBench, a standardized benchmark aiming to promote reproducible ML research on RDBs including multiple tables.',
+        image: 'https://source.unsplash.com/random?wallpapers',
+        imageLabel: 'Image Text',
+        published_where: "In Submission",
+        ref_address: "None",
+    },
+    /*{
+      title: 'Post title',
+      date: 'Nov 11',
+      description:
+        'This is a wider card with supporting text below as a natural lead-in to additional content.',
+      image: 'https://source.unsplash.com/random?wallpapers',
+      imageLabel: 'Image Text',
+    },*/
+];
 
 export default function CV() {
 
     return (
-        <Container sx={{ justifyContent: "center" }}>
-            <UnderPaper>
+        <ThemeProvider theme={theme}>
+            <Container sx={{ justifyContent: "center" }}>
                 <Grid container spacing={2}>
-                    <Grid item xs={12}>
-                        <Typography variant="h2">Lutong (Lugar) Zou</Typography>
-                    </Grid>
-                    <Grid item xs={12}>
-                        <Typography variant="h4">Personal Info</Typography>
-                        <Typography>
-                            Address: Beijing, China
-                            <br />
-                            Email: bbf@stu.pku.edu.cn
-                        </Typography>
-                    </Grid>
-                    <Grid item xs={12}>
-                        <Typography variant="h4">Profile</Typography>
-                        <Typography>
-                            I am currently an undergraduate student affiliated with the School of Computer Science at Peking University.
-                        </Typography>
-                        <Typography>
-                            My research interests embrace the broad field of Machine Learning, especially on the following branches:
-                        </Typography>
-                        <ul>
-                            <li>
-                                <Typography>
-                                    ML on relational data such as graphs and relational databases.
-                                </Typography>
-                            </li>
-                            <li>
-                                <Typography>Multi-modal Learning</Typography>
-                            </li>
-                            <li>
-                                <Typography>ML combined with System</Typography>
-                            </li>
-                        </ul>
+                    <Grid item xs={12} lg={12}>
+                        <UnderPaper>
+                            <Grid container spacing={2}>
+                                <Grid item xs={12}>
+                                    <Typography variant="h2">Lutong (Lugar) Zou</Typography>
+                                </Grid>
+
+                                <Grid item xs={12}>
+                                    <Grid
+                                        container
+                                        direction="row"
+                                        justifyContent="flex-start"
+                                        alignItems="flex-end"
+                                    >
+                                        <EmailIcon sx={{ fontSize: 60 }} />
+                                        <Typography variant="h4" style={{ marginLeft: '10px' }}>Personal Info</Typography>
+                                    </Grid>
+                                    <Typography variant="subtitle1">
+                                        Address: Beijing, China
+                                        <br />
+                                        Email: bbf@stu.pku.edu.cn
+                                    </Typography>
+                                </Grid>
+
+                                <Grid item xs={12}>
+                                    <Grid
+                                        container
+                                        direction="row"
+                                        justifyContent="flex-start"
+                                        alignItems="flex-end"
+                                    >
+                                        <PeopleAltIcon sx={{ fontSize: 60 }} />
+                                        <Typography variant="h4" style={{ marginLeft: '10px' }}>Profile</Typography>
+                                    </Grid>
+                                    <Typography variant="subtitle1">
+                                        I am currently an undergraduate student affiliated with the School of Computer Science at Peking University.<br />
+                                        My research interests embrace the broad field of Machine Learning, especially on the following branches:
+                                    </Typography>
+                                    <ul>
+                                        <li>
+                                            <Typography variant="subtitle1">ML on relational data such as graphs and relational databases.</Typography>
+                                        </li>
+                                        <li>
+                                            <Typography variant="subtitle1">Multi-modal Learning</Typography>
+                                        </li>
+                                        <li>
+                                            <Typography variant="subtitle1">ML combined with System</Typography>
+                                        </li>
+                                    </ul>
+                                </Grid>
+
+                                <Grid item xs={6}>
+                                    <Grid
+                                        container
+                                        direction="row"
+                                        justifyContent="flex-start"
+                                        alignItems="flex-end"
+                                    >
+                                        <SchoolIcon sx={{ fontSize: 60 }} />
+                                        <Typography variant="h4" style={{ marginLeft: '10px' }}>Education</Typography>
+
+                                    </Grid>
+                                    <EducationTimeline />
+                                </Grid>
+
+                                <Grid item xs={6}>
+                                    <Grid
+                                        container
+                                        direction="row"
+                                        justifyContent="flex-start"
+                                        alignItems="flex-end"
+                                    >
+                                        <BiotechIcon sx={{ fontSize: 60 }} />
+                                        <Typography variant="h4" style={{ marginLeft: '10px' }}>Research</Typography>
+                                    </Grid>
+                                    <ResearchTimeline />
+                                </Grid>
+
+                                <Grid item xs={12}>
+                                    <Grid
+                                        container
+                                        direction="row"
+                                        justifyContent="flex-start"
+                                        alignItems="flex-end"
+                                    >
+                                        <HistoryEduIcon sx={{ fontSize: 60 }} />
+                                        <Typography variant="h4" style={{ marginLeft: '10px' }}>Publications</Typography>
+                                    </Grid>
+                                    <Grid container spacing={4}>
+                                        {PubPosts.map((post) => (
+                                            <FeaturedPost key={post.title} post={post} />
+                                        ))}
+                                    </Grid>
+                                </Grid>
+
+                                <Grid item xs={6}>
+                                    <Grid
+                                        container
+                                        direction="row"
+                                        justifyContent="flex-start"
+                                        alignItems="flex-end"
+                                    >
+                                        <EmojiEventsIcon sx={{ fontSize: 60 }} />
+                                        <Typography variant="h4" style={{ marginLeft: '10px' }}>Awards</Typography>
+                                    </Grid>
+                                    <RewardList />
+                                </Grid>
+                                
+                                <Grid item xs={6}>
+                                    <Grid
+                                        container
+                                        direction="row"
+                                        justifyContent="flex-start"
+                                        alignItems="flex-end"
+                                    >
+                                        <TranslateIcon sx={{ fontSize: 60 }} />
+                                        <Typography variant="h4" style={{ marginLeft: '10px' }}>Languages</Typography>
+                                    </Grid>
+                                    <LanguageList />
+                                </Grid>
+
+                            </Grid>
+                        </UnderPaper>
                     </Grid>
                 </Grid>
-            </UnderPaper>
-        </Container>
+            </Container >
+        </ThemeProvider>
     )
 }

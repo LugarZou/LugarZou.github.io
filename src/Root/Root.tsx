@@ -8,8 +8,8 @@ import { Outlet } from 'react-router-dom';
 const sections = [
   { title: 'Overview', url: '/' },
   { title: 'Cirriculum Vitae', url: 'CV' },
+  { title: 'Showcase', url: 'Showcase' },
   { title: 'Working Ethics', url: '#' },
-  { title: 'Business', url: '#' },
   { title: 'Politics', url: '#' },
 ];
 

@@ -4,7 +4,8 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
 import Typography from '@mui/material/Typography';
-import { Link } from 'react-router-dom';
+import { Link as RouterLink} from 'react-router-dom';
+import Link from '@mui/material/Link';
 
 interface HeaderProps {
   sections: ReadonlyArray<{
@@ -43,6 +44,8 @@ export default function Header(props: HeaderProps) {
         {sections.map((section) => (
           <Link
             to={section.url}
+            underline="none"
+            component={RouterLink}
           >
             {section.title}
           </Link>

@@ -6,20 +6,17 @@ import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import TimelineDot from '@mui/lab/TimelineDot';
-import FastfoodIcon from '@mui/icons-material/Fastfood';
-import LaptopMacIcon from '@mui/icons-material/LaptopMac';
-import HotelIcon from '@mui/icons-material/Hotel';
-import RepeatIcon from '@mui/icons-material/Repeat';
-import CVPKUIcon from './CVIcon';
+import { CVPKUIcon, CVUIUCIcon } from './CVIcon';
 import Typography from '@mui/material/Typography';
 
 interface IntervalInstanceProps {
     time: string;
     event: string;
     description: string;
+    Icon: any;
 }
 
-const IntervalInstance: React.FC<IntervalInstanceProps> = ({ time, event, description }) => {
+const IntervalInstance: React.FC<IntervalInstanceProps> = ({ time, event, description, Icon }) => {
     return (
         <TimelineItem>
             <TimelineOppositeContent
@@ -35,7 +32,7 @@ const IntervalInstance: React.FC<IntervalInstanceProps> = ({ time, event, descri
                 <TimelineDot sx={{
                     backgroundColor: '#FFFFFF'
                 }}>
-                    <CVPKUIcon />
+                    <Icon />
                 </TimelineDot>
                 <TimelineConnector />
             </TimelineSeparator>
@@ -46,36 +43,26 @@ const IntervalInstance: React.FC<IntervalInstanceProps> = ({ time, event, descri
                 <Typography>{description}</Typography>
             </TimelineContent>
         </TimelineItem>
-
     )
 }
 
-export default function CustomizedTimeline() {
+export function EducationTimeline() {
     return (
         <Timeline position="alternate">
-            <IntervalInstance time="Sept.2021 - Ongoing" event="Peking University" description="Bachelor, Information and Computational Science" />
-            <TimelineItem>
-                <TimelineOppositeContent
-                    sx={{ m: 'auto 0' }}
-                    variant="body2"
-                    color="text.secondary"
-                >
-                    10:00 am
-                </TimelineOppositeContent>
-                <TimelineSeparator>
-                    <TimelineConnector />
-                    <TimelineDot color="primary">
-                        <LaptopMacIcon />
-                    </TimelineDot>
-                    <TimelineConnector />
-                </TimelineSeparator>
-                <TimelineContent sx={{ py: '12px', px: 2 }}>
-                    <Typography variant="h6" component="span">
-                        Code
-                    </Typography>
-                    <Typography>Because it&apos;s awesome!</Typography>
-                </TimelineContent>
-            </TimelineItem>
+            <IntervalInstance time="Sept.2021 - Ongoing" event="Peking University" description="Bachelor, Information and Computational Science" Icon={CVPKUIcon} />
+        </Timeline >
+    );
+}
+
+export function ResearchTimeline(){
+    return (
+        <Timeline position="alternate">
+            <IntervalInstance time="Jun.2023 - Ongoing" event="University of Illinois Urbana-Champaign" description="Research Intern, Mentored by Jiaxuan You" Icon={CVUIUCIcon} /> 
+        </Timeline>
+    )
+}
+
+{/*
             <TimelineItem>
                 <TimelineSeparator>
                     <TimelineConnector />
@@ -106,6 +93,4 @@ export default function CustomizedTimeline() {
                     <Typography>Because this is the life you love!</Typography>
                 </TimelineContent>
             </TimelineItem>
-        </Timeline>
-    );
-}
+*/}

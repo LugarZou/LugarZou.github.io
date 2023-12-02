@@ -16,6 +16,7 @@ import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 import EmailIcon from '@mui/icons-material/Email';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import TranslateIcon from '@mui/icons-material/Translate';
+import BuildIcon from '@mui/icons-material/Build';
 
 const theme = createTheme({
     typography: {
@@ -72,7 +73,7 @@ const PubPosts = [
         image: 'https://source.unsplash.com/random?wallpapers',
         imageLabel: 'Image Text',
         published_where: "In Submission",
-        ref_address: "None",
+        ref_address: "https://arxiv.org/abs/2310.16837v1",
     },
     /*{
       title: 'Post title',
@@ -213,7 +214,28 @@ export default function CV() {
                                     <RewardList />
                                 </Grid>
                                 
-                                
+                                <Grid item xs={12}>
+                                    <Grid
+                                        container
+                                        direction="row"
+                                        justifyContent="flex-start"
+                                        alignItems="flex-end"
+                                    >
+                                        <BuildIcon sx={{ fontSize: 60 }} />
+                                        <Typography variant="h4" style={{ marginLeft: '10px' }}>Tools</Typography>
+                                    </Grid>
+                                    <ul>
+                                        <li>
+                                            <Typography variant="subtitle1">Python, PyTorch</Typography>
+                                        </li>
+                                        <li>
+                                            <Typography variant="subtitle1">C, C++</Typography>
+                                        </li>
+                                        <li>
+                                            <Typography variant="subtitle1">Typescript, React</Typography>
+                                        </li>
+                                    </ul> 
+                                </Grid> 
 
                             </Grid>
                         </UnderPaper>

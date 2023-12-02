@@ -60,7 +60,8 @@ function ContentLink(props: ContentLinkProps) {
           <DialogContent>
             <DialogContentText id="alert-dialog-description">
               Due to various confidentiality agreements, I regret that I cannot publicly share this paper.
-              Nevertheless, I would be delighted to discuss our findings with you <strong>in person</strong>.
+              Nevertheless, I would be delighted to discuss our findings with you <strong>in person</strong>.<br/>
+              But you can still check our arxiv version <a href={href}>here</a>.
             </DialogContentText>
           </DialogContent>
           <DialogActions>

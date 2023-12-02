@@ -8,8 +8,8 @@ function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary" align="center">
       {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
+      <Link color="inherit">
+        Lutong Zou
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
@@ -18,12 +18,11 @@ function Copyright() {
 }
 
 interface FooterProps {
-  description: string;
   title: string;
 }
 
 export default function Footer(props: FooterProps) {
-  const { description, title } = props;
+  const { title } = props;
 
   return (
     <Box component="footer" sx={{ bgcolor: 'background.paper', py: 6 }}>
@@ -37,7 +36,9 @@ export default function Footer(props: FooterProps) {
           color="text.secondary"
           component="p"
         >
-          {description}
+          In this website I used pictures created by Artists:<br/>
+          Alex Suprun, Dmytro Demidko and Jackson Sophat on Unsplash<br/>
+
         </Typography>
         <Copyright />
       </Container>

@@ -18,7 +18,7 @@ export default function LanguageList() {
                         <Rating name="read-only" value={5} readOnly />
                         <Box ml={marginal_space}> {/* Adjust the ml (margin-left) value as needed */}
                             <Typography variant="subtitle1">
-                                中文是我的母语✅，很高兴能和大家用这门简洁的孤立语交流！
+                                很高兴能和大家用我的母语交流！✅
                             </ Typography>
                         </Box>
                     </ListItem>
@@ -38,7 +38,7 @@ export default function LanguageList() {
                         <Rating name="read-only" value={2} readOnly />
                         <Box ml={marginal_space}> {/* Adjust the ml (margin-left) value as needed */}
                             <Typography variant="subtitle1">
-                                Je suis actuellement en train d'étudier le français. Désormais, je suis convaincu(e) que je peux effectuer des achats en magasin 😘.
+                                Je suis actuellement en train d'étudier le français. Désormais, je suis convaincu que je peux effectuer des achats en magasin 😘.
                             </ Typography>
                         </ Box>
                     </ListItem>

@@ -111,6 +111,8 @@ export default function CV() {
                                         Address: Beijing, China
                                         <br />
                                         Email: bbf@stu.pku.edu.cn
+                                        <br/>
+                                        Website: https://lugartang.github.io/
                                     </Typography>
                                 </Grid>
 
@@ -136,7 +138,7 @@ export default function CV() {
                                             <Typography variant="subtitle1">Multi-modal Learning</Typography>
                                         </li>
                                         <li>
-                                            <Typography variant="subtitle1">ML combined with System</Typography>
+                                            <Typography variant="subtitle1">ML combined with Neuroscience</Typography>
                                         </li>
                                     </ul>
                                 </Grid>
@@ -192,12 +194,12 @@ export default function CV() {
                                         justifyContent="flex-start"
                                         alignItems="flex-end"
                                     >
-                                        <EmojiEventsIcon sx={{ fontSize: 60 }} />
-                                        <Typography variant="h4" style={{ marginLeft: '10px' }}>Awards</Typography>
+                                        <TranslateIcon sx={{ fontSize: 60 }} />
+                                        <Typography variant="h4" style={{ marginLeft: '10px' }}>Languages</Typography>
                                     </Grid>
-                                    <RewardList />
+                                    <LanguageList />
                                 </Grid>
-                                
+
                                 <Grid item xs={6}>
                                     <Grid
                                         container
@@ -205,11 +207,13 @@ export default function CV() {
                                         justifyContent="flex-start"
                                         alignItems="flex-end"
                                     >
-                                        <TranslateIcon sx={{ fontSize: 60 }} />
-                                        <Typography variant="h4" style={{ marginLeft: '10px' }}>Languages</Typography>
+                                        <EmojiEventsIcon sx={{ fontSize: 60 }} />
+                                        <Typography variant="h4" style={{ marginLeft: '10px' }}>Awards</Typography>
                                     </Grid>
-                                    <LanguageList />
+                                    <RewardList />
                                 </Grid>
+                                
+                                
 
                             </Grid>
                         </UnderPaper>

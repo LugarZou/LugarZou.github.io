@@ -6,11 +6,10 @@ import Container from '@mui/material/Container';
 import Typography from './Typography';
 import algorithmImage from '../../Images/algorithm.jpeg';
 import mathImage from '../../Images/math.webp';
-import frontendImage from '../../Images/frontend.jpeg';
-import mlImage from '../../Images/ml.jpeg';
+import frontendImage from '../../Images/frontend_jackson_sophat.jpg';
 import visionImage from '../../Images/vision.jpg';
 import dataImage from '../../Images/data.jpg';
-import ecoImage from '../../Images/eco.jpeg';
+import ecoImage from '../../Images/econo_dmytro_demidko.jpg';
 
 const ImageBackdrop = styled('div')(({ theme }) => ({
   position: 'absolute',

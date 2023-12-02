@@ -20,15 +20,15 @@ export default function Header(props: HeaderProps) {
 
   return (
     <React.Fragment>
-      <Toolbar sx={{ borderBottom: 1, borderColor: 'divider' }}>
+      <Toolbar sx={{ borderBottom: 1, borderColor: 'divider', minHeight: '64px' }}>
         <Typography
           component="h2"
           variant="h3"
           color="inherit"
           align="center"
           noWrap
-          sx={{ flex: 1 }}
-          fontFamily={'cursive'}
+          sx={{ flex: 1, margin: 'auto'}}
+          fontFamily={'Cursive'}
         >
           {title}
         </Typography>

@@ -64,13 +64,13 @@ const UnderPaper = styled(Paper)(({ theme }) => ({
 
 const PubPosts = [
     {
-        title: 'RDBench: ML Benchmark For Relational Databases',
+        title: 'DImBench: Missing Data Imputation Benchmark for Relational Databases',
         author_before: 'Zizhao Zhang*, Yi Yang*, ',
         author_me: "Lutong Zou*",
         author_after: ", He Wen*, Tao Feng, Jiaxuan You",
         description:
-            'We introduce RDBench, a standardized benchmark aiming to promote reproducible ML research on RDBs including multiple tables.',
-        image: 'https://source.unsplash.com/random?wallpapers',
+            'We introduce DImBench, a standardized benchmark that aims to promote reproducible ML research for solving missing data imputation tasks on RDBs.',
+        image: 'https://github.com/LugarTang/LugarTang.github.io/blob/master/src/Images/bird_zhangdaqian.jpg?raw=true',
         imageLabel: 'Image Text',
         published_where: "In Submission",
         ref_address: "https://arxiv.org/abs/2310.16837v1",
@@ -136,10 +136,10 @@ export default function CV() {
                                             <Typography variant="subtitle1">ML on relational data such as graphs and relational databases.</Typography>
                                         </li>
                                         <li>
-                                            <Typography variant="subtitle1">Multi-modal Learning</Typography>
+                                            <Typography variant="subtitle1">ML Theory</Typography>
                                         </li>
                                         <li>
-                                            <Typography variant="subtitle1">ML combined with Neuroscience</Typography>
+                                            <Typography variant="subtitle1">ML4Science</Typography>
                                         </li>
                                     </ul>
                                 </Grid>

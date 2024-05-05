@@ -23,6 +23,16 @@ export default function RewardList() {
               <ListItemText primary="3rd Prize" />
             </ListItemButton>
           </ListItem>
+          <Divider />
+          <ListItem disablePadding>
+            <ListItemButton component="a" href="https://hpcgame.pku.edu.cn/">
+              <ListItemIcon>
+                <CalculateIcon />
+              </ListItemIcon>
+              <ListItemText primary="1th PKU High-Performance Computing Game" />
+              <ListItemText primary="3rd Prize" />
+            </ListItemButton>
+          </ListItem>
         </List>
       </nav>
       <Divider />

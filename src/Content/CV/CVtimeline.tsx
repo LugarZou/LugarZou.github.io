@@ -6,7 +6,7 @@ import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import TimelineDot from '@mui/lab/TimelineDot';
-import { CVPKUIcon, CVUIUCIcon } from './CVIcon';
+import { CVPKUIcon, CVUIUCIcon, CVHarvardIcon } from './CVIcon';
 import Typography from '@mui/material/Typography';
 
 interface IntervalInstanceProps {
@@ -57,7 +57,8 @@ export function EducationTimeline() {
 export function ResearchTimeline(){
     return (
         <Timeline position="alternate">
-            <IntervalInstance time="Jun.2023 - Ongoing" event="University of Illinois Urbana-Champaign" description="Research Intern, Mentored by Jiaxuan You" Icon={CVUIUCIcon} /> 
+            <IntervalInstance time="Jun.2023 - Feb.2024" event="University of Illinois Urbana-Champaign" description="Research Intern, Mentored by Jiaxuan You" Icon={CVUIUCIcon} /> 
+            <IntervalInstance time="Apr.2024 - Ongoing" event="Harvard University" description='Assistant Researcher, Mentored by Susan A. Murphy' Icon={CVHarvardIcon}/>
         </Timeline>
     )
 }

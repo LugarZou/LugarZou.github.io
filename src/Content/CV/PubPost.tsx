@@ -73,7 +73,7 @@ function ContentLink(props: ContentLinkProps) {
   }
   else {
     return (
-      <Button size="small" color="primary" href={href}>
+      <Button variant="contained" size="medium" color="primary" href={href}>
         {where}
       </Button>
     )
@@ -102,7 +102,7 @@ export default function PubPost(props: PubPostProps) {
         </CardContent>
         <CardMedia
           component="img"
-          sx={{ width: 160, display: { xs: 'none', sm: 'block' } }}
+          sx={{ width: 160, display: { xs: 'none', sm: 'block' },objectFit: 'fill'}}
           image={post.image}
           alt={post.imageLabel}
         />

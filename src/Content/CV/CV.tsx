@@ -72,7 +72,7 @@ const PubPosts = [
             'We introduce DImBench, a standardized benchmark that aims to promote reproducible ML research for solving missing data imputation tasks on RDBs.',
         image: 'https://github.com/LugarTang/LugarTang.github.io/blob/master/src/Images/bird_zhangdaqian.jpg?raw=true',
         imageLabel: 'Image Text',
-        published_where: "In Submission",
+        published_where: "Arxiv",
         ref_address: "https://arxiv.org/abs/2310.16837v1",
     },
     /*{

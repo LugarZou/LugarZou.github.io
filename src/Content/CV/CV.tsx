@@ -131,25 +131,7 @@ export default function CV() {
                                         I am currently an undergraduate student affiliated with the School of Computer Science at Peking University.<br />
                                         My research interests embrace the broad field of Machine Learning, especially on the following branches:
                                     </Typography>
-                                    <ul>
-                                        <li>
-                                            <Typography variant="subtitle1">ML4Science: I'm currently working on RL4MobileHealth</Typography>
-                                        </li>
-                                        <li>
-                                            <Typography variant="subtitle1">ML on relational data such as graphs and relational databases, which leads to Publication 1</Typography>
-                                        </li>
-                                        <li>
-                                            <Typography variant="subtitle1">ML Theory: I have an interest in questions like</Typography>
-                                            <ul>
-                                                <li>
-                                                    <Typography variant="subtitle1">Why does a certain ML method work well?</Typography>
-                                                </li>
-                                                <li>
-                                                    <Typography variant="subtitle1">What principles should we adhere to when designing new ML methods?</Typography>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                    </ul>
+                                    <Typography variant="subtitle1">ML4Science, ML on relational data, ML Theory</Typography>
                                 </Grid>
 
                                 <Grid item xs={6}>

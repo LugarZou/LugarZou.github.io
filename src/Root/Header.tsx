@@ -28,7 +28,7 @@ export default function Header(props: HeaderProps) {
           align="center"
           noWrap
           sx={{ flex: 1, margin: 'auto'}}
-          fontFamily={'Cursive'}
+          fontFamily={'Playfair Display'}
         >
           {title}
         </Typography>

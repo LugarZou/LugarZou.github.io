@@ -31,7 +31,7 @@ export default function Root() {
           height: "100vh",
         }}
       >
-        <Header title="Lugar Zou" sections={sections} />
+        <Header title="Lutong Zou" sections={sections} />
         <div id="detail">
           <Outlet />
         </div>

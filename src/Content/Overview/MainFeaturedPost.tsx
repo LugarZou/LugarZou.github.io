@@ -39,7 +39,7 @@ export default function MainFeaturedPost(props: MainFeaturedPostProps) {
         }}
       />
       <Grid container>
-        <Grid item md={6}>
+        <Grid item md={7}>
           <Box
             sx={{
               position: 'relative',
@@ -47,12 +47,31 @@ export default function MainFeaturedPost(props: MainFeaturedPostProps) {
               pr: { md: 0 },
             }}
           >
-            <Typography component="h1" variant="h3" color="inherit" sx={{fontFamily:"Helvetica Neue" }} gutterBottom>
+            <Typography component="h1" variant="h2" color="inherit" sx={{ fontFamily: "Helvetica Neue" }} gutterBottom>
               {post.title}
             </Typography>
-            <Typography variant="h5" color="inherit" sx={{ whiteSpace: 'pre-line', fontFamily:"sans-serif" }} paragraph>
+            <Typography variant="h4" color="inherit" sx={{ whiteSpace: 'pre-line', fontFamily: "sans-serif" }} paragraph>
               {post.description}
             </Typography>
+            <ul>
+              <li>
+                <Typography variant="h5">ML4Science: I'm currently working on RL4MobileHealth</Typography>
+              </li>
+              <li>
+                <Typography variant="h5">ML on relational data such as graphs and relational databases</Typography>
+              </li>
+              <li>
+                <Typography variant="h5">ML Theory: I have an interest in questions like</Typography>
+                <ul>
+                  <li>
+                    <Typography variant="h5">Why does a certain ML method work well?</Typography>
+                  </li>
+                  <li>
+                    <Typography variant="h5">What principles should we adhere to when designing new ML methods?</Typography>
+                  </li>
+                </ul>
+              </li>
+            </ul>
           </Box>
         </Grid>
       </Grid>

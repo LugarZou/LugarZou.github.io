@@ -9,14 +9,10 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import MainFeaturedPost from './MainFeaturedPost';
 
 
-
-
-
-
 const mainFeaturedPost = {
   title: 'Welcome to Lugar\'s Researcher Page!',
   description:
-    "This is a platform where you can learn more about me as a researcher.\nI am currently an undergraduate student affiliated with the School of Computer Science at Peking University.",
+    "This is a platform where you can learn more about me as a researcher.\nI am currently an undergraduate student affiliated with the School of Computer Science at Peking University.\nMy research interests embrace the broad field of Machine Learning, especially on the following branches:",
   image: 'https://source.unsplash.com/random?wallpapers',
   imageText: 'main image description',
   linkText: 'Continue reading…',

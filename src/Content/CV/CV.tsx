@@ -64,25 +64,31 @@ const UnderPaper = styled(Paper)(({ theme }) => ({
 
 const PubPosts = [
     {
-        title: 'DImBench: Missing Data Imputation Benchmark for Relational Databases',
+        title: 'RDBench: ML Benchmark for Relational Databases',
         author_before: 'Zizhao Zhang*, Yi Yang*, ',
         author_me: "Lutong Zou*",
         author_after: ", He Wen*, Tao Feng, Jiaxuan You",
         description:
-            'We introduce DImBench, a standardized benchmark that aims to promote reproducible ML research for solving missing data imputation tasks on RDBs.',
-        image: 'https://github.com/LugarTang/LugarTang.github.io/blob/master/src/Images/bird_zhangdaqian.jpg?raw=true',
+            'We introduced ML Benchmark For Relational Databases (RDBench), aiming to promote reproducible ML research on RDBs that include multiple tables.',
+        image: 'https://github.com/LugarTang/LugarTang.github.io/blob/master/src/Images/OverviewRDB.png?raw=true',
+        imageWidth: 600,
         imageLabel: 'Image Text',
         published_where: "Arxiv",
         ref_address: "https://arxiv.org/abs/2310.16837v1",
     },
-    /*{
-      title: 'Post title',
-      date: 'Nov 11',
+    {
+      title: 'Causal DAG-informed Reward Design: Constructing a Low-Variance Surrogate Reward',
+      author_before: '',
+      author_me: "Lutong Zou",
+      author_after: ", Ziping Xu, Daiqi Gao, Susan Murphy",
       description:
-        'This is a wider card with supporting text below as a natural lead-in to additional content.',
-      image: 'https://source.unsplash.com/random?wallpapers',
+          'This project focuses on proposing a general framework for constructing reward functions informed by casual Direct Acyclic Graph (DAG) with provable benefits for Reinforcement Learning (RL) problems.',
+      image: 'https://github.com/LugarTang/LugarTang.github.io/blob/master/src/Images/Process.png?raw=true',
+      imageWidth: 400,
       imageLabel: 'Image Text',
-    },*/
+      published_where: "Poster (Paper coming soon)",
+      ref_address: "https://github.com/LugarTang/LugarTang.github.io/blob/master/src/Images/PosterLutong.pdf",
+    },
 ];
 
 export default function CV() {
@@ -111,7 +117,7 @@ export default function CV() {
                                     <Typography variant="subtitle1">
                                         Address: Beijing, China
                                         <br />
-                                        Email: bbf@stu.pku.edu.cn
+                                        Email: xjqrxjqr@gmail.com
                                         <br />
                                         Website: https://lugartang.github.io/
                                     </Typography>
@@ -128,10 +134,10 @@ export default function CV() {
                                         <Typography variant="h4" style={{ marginLeft: '10px' }}>Profile</Typography>
                                     </Grid>
                                     <Typography variant="subtitle1">
-                                        I am currently an undergraduate student affiliated with the School of Computer Science at Peking University.<br />
+                                        I am currently an undergraduate student affiliated with the School of EECS @ Peking University.<br />
                                         My research interests embrace the broad field of Machine Learning, especially on the following branches:
                                     </Typography>
-                                    <Typography variant="subtitle1">ML4Science, ML on relational data, ML Theory</Typography>
+                                    <Typography variant="subtitle1">Reinforcement Learning, Decision Making, structured LLM, mHealth</Typography>
                                 </Grid>
 
                                 <Grid item xs={6}>
@@ -169,7 +175,7 @@ export default function CV() {
                                         alignItems="flex-end"
                                     >
                                         <HistoryEduIcon sx={{ fontSize: 60 }} />
-                                        <Typography variant="h4" style={{ marginLeft: '10px' }}>Publications</Typography>
+                                        <Typography variant="h4" style={{ marginLeft: '10px' }}>Projects</Typography>
                                     </Grid>
                                     <Grid container spacing={4}>
                                         {PubPosts.map((post) => (

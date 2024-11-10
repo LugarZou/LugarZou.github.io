@@ -28,7 +28,7 @@ export default function LanguageList() {
                         <Rating name="read-only" value={4} readOnly />
                         <Box ml={marginal_space}> {/* Adjust the ml (margin-left) value as needed */}
                             <Typography variant="subtitle1">
-                                English serves as my primary working language, ensuring seamless communication if you are proficient in English 😉.
+                                English serves as my primary working language, ensuring seamless communication if you are proficient in English 😉. Test score: TOEFL-iBT 107
                             </ Typography>
                         </ Box>
                     </ListItem>

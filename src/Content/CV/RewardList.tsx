@@ -19,7 +19,7 @@ export default function RewardList() {
               <ListItemIcon>
                 <CalculateIcon />
               </ListItemIcon>
-              <ListItemText primary="0th PKU High-Performance Computing Game" />
+              <ListItemText primary="2023 PKU High-Performance Computing Game" />
               <ListItemText primary="3rd Prize" />
             </ListItemButton>
           </ListItem>
@@ -29,7 +29,7 @@ export default function RewardList() {
               <ListItemIcon>
                 <CalculateIcon />
               </ListItemIcon>
-              <ListItemText primary="1th PKU High-Performance Computing Game" />
+              <ListItemText primary="2024 PKU High-Performance Computing Game" />
               <ListItemText primary="3rd Prize" />
             </ListItemButton>
           </ListItem>

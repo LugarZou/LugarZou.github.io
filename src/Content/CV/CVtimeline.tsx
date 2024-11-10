@@ -56,7 +56,7 @@ const IntervalInstance: React.FC<IntervalInstanceProps> = ({ time, event, descri
 export function EducationTimeline() {
     return (
         <Timeline position="alternate">
-            <IntervalInstance time="Sept.2021 - Ongoing" event="Peking University" description="Bachelor, Information and Computational Science" Icon={CVPKUIcon} mentor='' link='' />
+            <IntervalInstance time="Sept.2021 - Ongoing" event="Peking University" description="Bachelor, Information and Computing Science" Icon={CVPKUIcon} mentor='' link='' />
         </Timeline >
     );
 }

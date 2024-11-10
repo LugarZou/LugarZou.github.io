@@ -18,6 +18,7 @@ interface PubPostProps {
     author_after: string;
     description: string;
     image: string;
+    imageWidth: number;
     imageLabel: string;
     title: string;
     published_where: string;
@@ -84,7 +85,7 @@ export default function PubPost(props: PubPostProps) {
   const { post } = props;
 
   return (
-    <Grid item xs={12} md={6}>
+    <Grid item xs={12} md={12}>
       <Card sx={{ display: 'flex' }}>
         <CardContent sx={{ flex: 1 }}>
           <Typography variant="h5">
@@ -102,7 +103,7 @@ export default function PubPost(props: PubPostProps) {
         </CardContent>
         <CardMedia
           component="img"
-          sx={{ width: 160, display: { xs: 'none', sm: 'block' },objectFit: 'fill'}}
+          sx={{ width: post.imageWidth, height: 300, display: { xs: 'none', sm: 'block' },objectFit: 'fill'}}
           image={post.image}
           alt={post.imageLabel}
         />

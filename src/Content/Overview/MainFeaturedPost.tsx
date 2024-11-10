@@ -55,21 +55,13 @@ export default function MainFeaturedPost(props: MainFeaturedPostProps) {
             </Typography>
             <ul>
               <li>
-                <Typography variant="h5">ML4Science: I'm currently working on RL4MobileHealth</Typography>
+                <Typography variant="h5">How can an agent determine what to do? I am now working on RL for mHealth.</Typography>
               </li>
               <li>
-                <Typography variant="h5">ML on relational data such as graphs and relational databases</Typography>
+                <Typography variant="h5">How can we justify the decision made by LLM?</Typography>
               </li>
               <li>
-                <Typography variant="h5">ML Theory: I have an interest in questions like</Typography>
-                <ul>
-                  <li>
-                    <Typography variant="h5">Why does a certain ML method work well?</Typography>
-                  </li>
-                  <li>
-                    <Typography variant="h5">What principles should we adhere to when designing new ML methods?</Typography>
-                  </li>
-                </ul>
+                <Typography variant="h5">How can we interpret data in a structured, explicable way?</Typography>
               </li>
             </ul>
           </Box>

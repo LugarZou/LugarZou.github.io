@@ -3,6 +3,7 @@ import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
+import selfPic from '../../Images/PosterPic.png';
 
 interface MainFeaturedPostProps {
   post: {
@@ -55,15 +56,30 @@ export default function MainFeaturedPost(props: MainFeaturedPostProps) {
             </Typography>
             <ul>
               <li>
-                <Typography variant="h5">How can an agent determine what to do? I am now working on RL for mHealth.</Typography>
+                <Typography variant="h5">ML on Health Decision - Now I'm working on Reinforcement Learning on Digital Intervention</Typography>
               </li>
               <li>
-                <Typography variant="h5">How can we justify the decision made by LLM?</Typography>
+                <Typography variant="h5">Interpret data in a structured, explicable way</Typography>
               </li>
               <li>
-                <Typography variant="h5">How can we interpret data in a structured, explicable way?</Typography>
+                <Typography variant="h5">How can we justify methods: Statistics, Causal Inference</Typography>
               </li>
             </ul>
+          </Box>
+        </Grid>
+        <Grid item md={5}>
+          <Box
+            sx={{
+              position: 'relative',
+              p: 3,
+              pr: 0,
+            }}
+          >
+            <img
+              style={{ display: 'block', maxWidth: '100%', maxHeight: '100%', width: 'auto', height: 'auto' }}
+              src={selfPic}
+              alt={post.imageText}
+            />
           </Box>
         </Grid>
       </Grid>

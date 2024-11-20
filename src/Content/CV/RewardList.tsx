@@ -8,6 +8,8 @@ import ListItemText from '@mui/material/ListItemText';
 import Divider from '@mui/material/Divider';
 import DraftsIcon from '@mui/icons-material/Drafts';
 import CalculateIcon from '@mui/icons-material/Calculate';
+import CardGiftcardIcon from '@mui/icons-material/CardGiftcard';
+import ComputerIcon from '@mui/icons-material/Computer';
 
 export default function RewardList() {
   return (
@@ -19,8 +21,26 @@ export default function RewardList() {
               <ListItemIcon>
                 <CalculateIcon />
               </ListItemIcon>
-              <ListItemText primary="2023 PKU High-Performance Computing Game" />
+              <ListItemText primary="2024 PKU High-Performance Computing Game" />
               <ListItemText primary="3rd Prize" />
+            </ListItemButton>
+          </ListItem>
+          <Divider />
+          <ListItem disablePadding>
+            <ListItemButton component="a">
+              <ListItemIcon>
+                <ComputerIcon />
+              </ListItemIcon>
+              <ListItemText primary="2024 PKU Award for Scientific Research" />          
+            </ListItemButton>
+          </ListItem>
+          <Divider />
+          <ListItem disablePadding>
+            <ListItemButton component="a" >
+              <ListItemIcon>
+                <CardGiftcardIcon />
+              </ListItemIcon>
+              <ListItemText primary="2024 The Okamatsu Scholarship" />          
             </ListItemButton>
           </ListItem>
           <Divider />
@@ -29,7 +49,7 @@ export default function RewardList() {
               <ListItemIcon>
                 <CalculateIcon />
               </ListItemIcon>
-              <ListItemText primary="2024 PKU High-Performance Computing Game" />
+              <ListItemText primary="2023 PKU High-Performance Computing Game" />
               <ListItemText primary="3rd Prize" />
             </ListItemButton>
           </ListItem>

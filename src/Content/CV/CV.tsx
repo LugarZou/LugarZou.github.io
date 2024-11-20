@@ -137,7 +137,7 @@ export default function CV() {
                                         I am currently an undergraduate student affiliated with the School of EECS @ Peking University.<br />
                                         My research interests embrace the broad field of Machine Learning, especially on the following branches:
                                     </Typography>
-                                    <Typography variant="subtitle1">Reinforcement Learning, Decision Making, structured LLM, mHealth</Typography>
+                                    <Typography variant="subtitle1">Reinforcement Learning, Deep Learning(GNN), Healthcare Application</Typography>
                                 </Grid>
 
                                 <Grid item xs={6}>

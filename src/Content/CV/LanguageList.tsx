@@ -28,7 +28,7 @@ export default function LanguageList() {
                         <Rating name="read-only" value={4} readOnly />
                         <Box ml={marginal_space}> {/* Adjust the ml (margin-left) value as needed */}
                             <Typography variant="subtitle1">
-                                English serves as my primary working language, ensuring seamless communication if you are proficient in English 😉. Test score: TOEFL-iBT 107
+                                English serves as my primary working language😉. Test score: TOEFL-iBT 107
                             </ Typography>
                         </ Box>
                     </ListItem>
@@ -38,7 +38,7 @@ export default function LanguageList() {
                         <Rating name="read-only" value={2} readOnly />
                         <Box ml={marginal_space}> {/* Adjust the ml (margin-left) value as needed */}
                             <Typography variant="subtitle1">
-                                Je suis actuellement en train d'étudier le français. Désormais, je suis convaincu que je peux effectuer des achats en magasin 😘.
+                                Je suis actuellement en train d'étudier le français😘.
                             </ Typography>
                         </ Box>
                     </ListItem>

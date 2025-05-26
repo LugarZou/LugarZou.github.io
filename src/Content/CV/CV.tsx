@@ -64,6 +64,19 @@ const UnderPaper = styled(Paper)(({ theme }) => ({
 
 const PubPosts = [
     {
+        title: 'Causal DAG-informed Reward Design: Constructing a Low-Variance Surrogate Reward',
+        author_before: '',
+        author_me: "Lutong Zou",
+        author_after: ", Ziping Xu, Daiqi Gao, Susan Murphy",
+        description:
+            'This project focuses on proposing a general framework for constructing reward functions informed by casual Direct Acyclic Graph (DAG) with provable benefits for Reinforcement Learning (RL) problems.',
+        image: 'https://github.com/LugarTang/LugarTang.github.io/blob/master/src/Images/Process.png?raw=true',
+        imageWidth: 400,
+        imageLabel: 'Image Text',
+        published_where: "RLDM 2025 Spotlight",
+        ref_address: "https://github.com/LugarTang/LugarTang.github.io/blob/master/src/Images/PosterLutong.pdf",
+    },
+    {
         title: 'RDBench: ML Benchmark for Relational Databases',
         author_before: 'Zizhao Zhang*, Yi Yang*, ',
         author_me: "Lutong Zou*",
@@ -74,20 +87,7 @@ const PubPosts = [
         imageWidth: 600,
         imageLabel: 'Image Text',
         published_where: "Arxiv",
-        ref_address: "https://arxiv.org/abs/2310.16837v1",
-    },
-    {
-      title: 'Causal DAG-informed Reward Design: Constructing a Low-Variance Surrogate Reward',
-      author_before: '',
-      author_me: "Lutong Zou",
-      author_after: ", Ziping Xu, Daiqi Gao, Susan Murphy",
-      description:
-          'This project focuses on proposing a general framework for constructing reward functions informed by casual Direct Acyclic Graph (DAG) with provable benefits for Reinforcement Learning (RL) problems.',
-      image: 'https://github.com/LugarTang/LugarTang.github.io/blob/master/src/Images/Process.png?raw=true',
-      imageWidth: 400,
-      imageLabel: 'Image Text',
-      published_where: "Poster (Paper coming soon)",
-      ref_address: "https://github.com/LugarTang/LugarTang.github.io/blob/master/src/Images/PosterLutong.pdf",
+        ref_address: "https://arxiv.org/pdf/2310.16837v1",
     },
 ];
 
@@ -118,12 +118,10 @@ export default function CV() {
                                         Address: Beijing, China
                                         <br />
                                         Email: xjqrxjqr@gmail.com
-                                        <br />
-                                        Website: https://lugartang.github.io/
                                     </Typography>
                                 </Grid>
 
-                                <Grid item xs={12}>
+                                {/*<Grid item xs={12}>
                                     <Grid
                                         container
                                         direction="row"
@@ -138,7 +136,7 @@ export default function CV() {
                                         My research interests embrace the broad field of Machine Learning, especially on the following branches:
                                     </Typography>
                                     <Typography variant="subtitle1">Reinforcement Learning, Deep Learning(GNN), Healthcare Application</Typography>
-                                </Grid>
+                                </Grid>*/}
 
                                 <Grid item xs={6}>
                                     <Grid

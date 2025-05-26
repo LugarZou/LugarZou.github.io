@@ -12,7 +12,7 @@ import MainFeaturedPost from './MainFeaturedPost';
 const mainFeaturedPost = {
   title: 'Welcome to Lugar\'s Researcher Page!',
   description:
-    "I am an undergraduate student affiliated with the School of EECS @ Peking University. Currently I am a visiting student in the Stats Department @ Harvard University.\nMy research interests embrace the broad field of Machine Learning, especially on healthcare applications:",
+    "I am an incoming master's student in Data Science at Harvard University.\nMy research interests embrace the broad field of machine learning:",
   image: 'https://source.unsplash.com/random?wallpapers',
   imageText: 'main image description',
   linkText: 'Continue reading…',

@@ -9,6 +9,7 @@ import Root from './Root/Root';
 import CV from './Content/CV/CV';
 import Overview from './Content/Overview/Overview';
 import Showcase from './Content/Showcase/Showcase';
+import Besides from './Content/Besides/Besides';
 
 const AppRouter = createBrowserRouter([
     {
@@ -26,6 +27,10 @@ const AppRouter = createBrowserRouter([
             {
                 path: "Showcase",
                 element: <Showcase />,
+            },
+            {
+                path: "besides",
+                element: <Besides />,
             },
         ],    
     },

@@ -56,13 +56,10 @@ export default function MainFeaturedPost(props: MainFeaturedPostProps) {
             </Typography>
             <ul>
               <li>
-                <Typography variant="h5">ML on Health Decision - Now I'm working on Reinforcement Learning on Digital Intervention</Typography>
+                <Typography variant="h4">ML for decision making: quantitative trading, mobile health, etc.</Typography>
               </li>
               <li>
-                <Typography variant="h5">Interpret data in a structured, explicable way</Typography>
-              </li>
-              <li>
-                <Typography variant="h5">How can we justify methods: Statistics, Causal Inference</Typography>
+                <Typography variant="h4">Justifying methods: statistics, causal inference</Typography>
               </li>
             </ul>
           </Box>

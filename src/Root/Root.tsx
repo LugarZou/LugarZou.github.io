@@ -9,9 +9,9 @@ import background from '../Images/Background_alex_suprun.jpg';
 const sections = [
   { title: 'Overview', url: '/' },
   { title: 'Cirriculum Vitae', url: 'CV' },
-  { title: 'Showcase', url: 'Showcase' },
-  /*{ title: 'Working Ethics', url: '#' },
-  { title: 'Acknowledgment', url: 'Ack' },*/
+  /*{ title: 'Showcase', url: 'Showcase' },
+  { title: 'Working Ethics', url: '#' },*/
+  { title: 'Besides', url: 'besides' }
 ];
 
 // TODO remove, this demo shouldn't need to reset the theme.

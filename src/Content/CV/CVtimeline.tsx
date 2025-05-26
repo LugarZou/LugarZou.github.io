@@ -16,9 +16,10 @@ interface IntervalInstanceProps {
     Icon: any;
     mentor: string;
     link: string;
+    connectorVisibility: number
 }
 
-const IntervalInstance: React.FC<IntervalInstanceProps> = ({ time, event, description, Icon, mentor, link }) => {
+const IntervalInstance: React.FC<IntervalInstanceProps> = ({ time, event, description, Icon, mentor, link, connectorVisibility }) => {
     return (
         <TimelineItem>
             <TimelineOppositeContent
@@ -30,19 +31,23 @@ const IntervalInstance: React.FC<IntervalInstanceProps> = ({ time, event, descri
                 {time}
             </TimelineOppositeContent>
             <TimelineSeparator>
-                <TimelineConnector />
+                {/* Display upper connector if the first bit is set */}
+                {connectorVisibility & 0b01 ? <TimelineConnector /> : null}
                 <TimelineDot sx={{
                     backgroundColor: '#FFFFFF'
                 }}>
                     <Icon />
                 </TimelineDot>
-                <TimelineConnector />
+                {/* Display lower connector if the second bit is set */}
+                {connectorVisibility & 0b10 ? <TimelineConnector /> : null}
             </TimelineSeparator>
             <TimelineContent sx={{ py: '12px', px: 2 }}>
                 <Typography variant="h6" component="span">
                     {event}
                 </Typography>
-                <Typography>{description}</Typography>
+                <Typography>
+                    <span dangerouslySetInnerHTML={{ __html: description }} />
+                </Typography>
                 {mentor !== '' && link !== '' && (
                     <Typography>
                         Mentor: <a href={link}>{mentor}</a>
@@ -56,7 +61,8 @@ const IntervalInstance: React.FC<IntervalInstanceProps> = ({ time, event, descri
 export function EducationTimeline() {
     return (
         <Timeline position="alternate">
-            <IntervalInstance time="Sept.2021 - Ongoing" event="Peking University" description="Bachelor, Information and Computing Science" Icon={CVPKUIcon} mentor='' link='' />
+            <IntervalInstance time="Sept. 2025 - Ongoing" event="Harvard University" description="Master<br />Data Science" Icon={CVHarvardIcon} mentor='' link='' connectorVisibility={0b10} />
+            <IntervalInstance time="Sept. 2021 - July 2025" event="Peking University" description="Bachelor<br />Information and Computing Science" Icon={CVPKUIcon} mentor='' link='' connectorVisibility={0b01} />
         </Timeline >
     );
 }
@@ -64,8 +70,9 @@ export function EducationTimeline() {
 export function ResearchTimeline() {
     return (
         <Timeline position="alternate">
-            <IntervalInstance time="Apr.2024 - Ongoing" event="Harvard University" description='Research Intern' Icon={CVHarvardIcon} mentor='Susan A. Murphy' link='https://people.seas.harvard.edu/~samurphy/' />
-            <IntervalInstance time="Jun.2023 - Feb.2024" event="University of Illinois Urbana-Champaign" description="Research Intern" Icon={CVUIUCIcon} mentor='Jiaxuan You' link='https://cs.stanford.edu/people/jiaxuan/' />
+            <IntervalInstance time="Feb. 2025 - June 2025" event="Peking University" description="Student Researcher" Icon={CVPKUIcon} mentor='Ming Zhang' link='https://pkudlib.github.io/' connectorVisibility={0b10}/>
+            <IntervalInstance time="Apr. 2024 - Dec. 2024" event="Harvard University" description='Research Intern' Icon={CVHarvardIcon} mentor='Susan A. Murphy' link='https://people.seas.harvard.edu/~samurphy/' connectorVisibility={0b11} />
+            <IntervalInstance time="June 2023 - Feb. 2024" event="University of Illinois Urbana-Champaign" description="Research Intern" Icon={CVUIUCIcon} mentor='Jiaxuan You' link='https://cs.stanford.edu/people/jiaxuan/' connectorVisibility={0b01}/>
         </Timeline>
     )
 }

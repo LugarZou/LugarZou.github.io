@@ -64,17 +64,17 @@ const UnderPaper = styled(Paper)(({ theme }) => ({
 
 const PubPosts = [
     {
-        title: 'Causal DAG-informed Reward Design: Constructing a Low-Variance Surrogate Reward',
+        title: 'Mediator-Based Reward Design in Online Contextual Bandit',
         author_before: '',
         author_me: "Lutong Zou",
         author_after: ", Ziping Xu, Daiqi Gao, Susan Murphy",
         description:
-            'This project focuses on proposing a general framework for constructing reward functions informed by casual Direct Acyclic Graph (DAG) with provable benefits for Reinforcement Learning (RL) problems.',
+            'This paper proposes a framework that constructs surrogate rewards based on mediators between actions and rewards, informed by expert-provided causal directed acyclic graphs (DAGs).',
         image: 'https://github.com/LugarTang/LugarTang.github.io/blob/master/src/Images/Process.png?raw=true',
         imageWidth: 400,
         imageLabel: 'Image Text',
         published_where: "RLDM 2025 Spotlight",
-        ref_address: "https://github.com/LugarTang/LugarTang.github.io/blob/master/src/Images/PosterLutong.pdf",
+        ref_address: "https://github.com/LugarZou/LugarZou.github.io/blob/master/src/Images/RLDMCamera_ready.pdf",
     },
     {
         title: 'RDBench: ML Benchmark for Relational Databases',

@@ -14,14 +14,15 @@ import SkipNextIcon from '@mui/icons-material/SkipNext';
 const GITHUB_RAW_PREFIX = "https://raw.githubusercontent.com/LugarZou/LugarZou.github.io/master/src/Music/";
 // 手动列出 src/Music 下的 mp3 文件名
 const musicFiles = [
+    'Chopin-Op23,No1.mp4',
     'Chopin-Op47,No3.mp3',
     'Chopin-Op52,No4.mp3'
 ];
 
 // 解析文件名，提取作者和曲名
 function parseMusicFileName(name: string) {
-    // Chopin-Op47,No3.mp3 => Chopin, Op47,No3
-    const base = name.replace(/\.mp3$/, '');
+    // Chopin-Op47,No3.mp3/mp4/mov => Chopin, Op47,No3
+    const base = name.replace(/\.(mp3|mp4|mov)$/i, '');
     const dashIdx = base.indexOf('-');
     if (dashIdx > 0) {
         return {
@@ -93,8 +94,6 @@ export default function MediaControlCard() {
                 <Typography variant="body2" color="text.secondary">
                     我喜欢听的音乐很杂，浪漫主义、粤语等不一而足。<br />
                     I enjoy a wide variety of music, from Romanticism to Cantonese and more.<br />
-                    现在只放了两首Chopin的Ballade。<br />
-                    Currently, I have only included two of Chopin's Ballades.
                 </Typography>
             </Box>
             {/* 播放器区 */}

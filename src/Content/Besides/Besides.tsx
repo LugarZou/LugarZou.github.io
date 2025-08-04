@@ -23,7 +23,7 @@ const Besides: React.FC = () => {
                 <Grid item xs={12} md={5} sx={{ mt: 6 }}>
                     <MediaControlCard />
                 </Grid>
-                <Grid item xs={12} md={5} sx={{ mt: 4 }}>
+                {/* <Grid item xs={12} md={5} sx={{ mt: 4 }}>
                     <Paper elevation={1} sx={{ p: 2, height: '100%' }}>
                         <Typography variant="h5">以恒 Stick to</Typography>
                         <Typography variant="body1" color="text.secondary">
@@ -31,8 +31,22 @@ const Besides: React.FC = () => {
                             This is both personal and a bit boastful, but it is something I struggle to stick to. I just want to put it into words so it's clear in my mind.<br />
                         </Typography>
                         <Typography variant="body1" color="text.secondary">
-                            - 限饮：从2025年5月26日19时46分开始，我只喝水、茶、咖啡、牛奶、椰子水。<br />
-                            - Beverage Limit: Starting from May 26, 2025, at 19:46, I will only drink water, tea, coffee, milk, and coconut water.<br />
+                            - 限饮：从2025年5月26日19时46分开始，我只喝水、茶、咖啡、牛奶、椰子水、纯果汁。<br />
+                            - Beverage Limit: Starting from May 26, 2025, at 19:46, I will only drink water, tea, coffee, milk, coconut water and 100% juice.<br />
+                        </Typography>
+                    </Paper>
+                </Grid> */}
+                <Grid item xs={12} md={6} sx={{ mt: 2 }}>
+                    <Paper elevation={1} sx={{ p: 2, height: '100%' }}>
+                        <Typography variant="h5">春风夜雨 Friends</Typography>
+                        <Typography variant="body1" color="text.secondary">
+                            山谷这两句诗早就给人用滥了，奈何写得太好，实在不能割舍。未共醉春风者谈论当时夜雨多少显得虚伪，而无孤灯挑尽之思者到底流于轻浮。率意独驾，不由径路，幸与诸君历久，未效穷途之哭。<br />
+                            This paragraph is too sentimental and literary to translate, but luckily, I am the author, so I'll just re-express it through the lens of English culture:<br />
+                            <em>
+                                "And he is your board and your fireside.<br />
+                                For you come to him with your hunger, and you seek him for peace."
+                            </em> Khalil Gibran On Friendship<br/>
+                            I am grateful for the friends who have been with me through thick and thin.<br/>
                         </Typography>
                     </Paper>
                 </Grid>

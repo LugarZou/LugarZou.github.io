@@ -1,23 +1,34 @@
 {
   "files": {
     "main.css": "/static/css/main.073c9b0a.css",
-    "main.js": "/static/js/main.d1dd1295.js",
+    "main.js": "/static/js/main.4ebfc17f.js",
     "static/js/787.d3428903.chunk.js": "/static/js/787.d3428903.chunk.js",
+    "static/media/AlbumPhoto2.png": "/static/media/AlbumPhoto2.21baad0dba91e7216b2b.png",
+    "static/media/AlbumPhoto5.png": "/static/media/AlbumPhoto5.c606aa5c251c8ed4ddc4.png",
+    "static/media/AlbumPhoto3.png": "/static/media/AlbumPhoto3.218da677016e1d7fa1f9.png",
+    "static/media/AlbumPhoto4.png": "/static/media/AlbumPhoto4.5a0aa118dc06bc024a9b.png",
+    "static/media/AlbumPhoto1.png": "/static/media/AlbumPhoto1.9259536299a9f6bda563.png",
+    "static/media/AlbumPhoto10.png": "/static/media/AlbumPhoto10.fb89080dba1de9e6f561.png",
+    "static/media/AlbumPhoto9.png": "/static/media/AlbumPhoto9.32f99dda0e5f2359c9f4.png",
+    "static/media/AlbumPhoto6.png": "/static/media/AlbumPhoto6.cd0dee653eaa84e3faa8.png",
     "static/media/Background_alex_suprun.jpg": "/static/media/Background_alex_suprun.7d9b797283254e3af275.jpg",
+    "static/media/AlbumPhoto7.png": "/static/media/AlbumPhoto7.c6af6d4f15fc2a43dc72.png",
+    "static/media/AlbumPhoto8.png": "/static/media/AlbumPhoto8.3e799f7ff42c7f1414db.png",
     "static/media/econo_dmytro_demidko.jpg": "/static/media/econo_dmytro_demidko.b5a3c0894c305eeb74df.jpg",
-    "static/media/PosterPic.png": "/static/media/PosterPic.c623a8949ec8579126f6.png",
+    "static/media/CuttedNewPhoto.png": "/static/media/CuttedNewPhoto.15455cc185aef6aa9081.png",
     "static/media/frontend_jackson_sophat.jpg": "/static/media/frontend_jackson_sophat.4a2a02536a16d26260b6.jpg",
+    "static/media/bird_zhangdaqian.jpg": "/static/media/bird_zhangdaqian.47ee744479cb25ce0f32.jpg",
     "static/media/data.jpg": "/static/media/data.229f3b6941ca97148fc0.jpg",
     "static/media/algorithm.jpeg": "/static/media/algorithm.41116e6408de30d3746f.jpeg",
     "static/media/math.webp": "/static/media/math.2078ca206299b9a0dfda.webp",
     "static/media/vision.jpg": "/static/media/vision.9f1ed7b40584adcbcb7f.jpg",
     "index.html": "/index.html",
     "main.073c9b0a.css.map": "/static/css/main.073c9b0a.css.map",
-    "main.d1dd1295.js.map": "/static/js/main.d1dd1295.js.map",
+    "main.4ebfc17f.js.map": "/static/js/main.4ebfc17f.js.map",
     "787.d3428903.chunk.js.map": "/static/js/787.d3428903.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.d1dd1295.js"
+    "static/js/main.4ebfc17f.js"
   ]
 }

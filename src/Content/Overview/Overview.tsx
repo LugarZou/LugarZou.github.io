@@ -12,7 +12,7 @@ import MainFeaturedPost from './MainFeaturedPost';
 const mainFeaturedPost = {
   title: 'Welcome to Lugar\'s Researcher Page!',
   description:
-    "I am an incoming master's student in Data Science at Harvard University.\nMy research interests embrace the broad field of machine learning:",
+    <>I am an incoming master's student in <strong style={{ color: '#ffd54f' }}>Data Science</strong> at <strong style={{ color: '#ffd54f' }}>Harvard University</strong>.<br />My research interests embrace the broad field of machine learning:</>,
   image: 'https://source.unsplash.com/random?wallpapers',
   imageText: 'main image description',
   linkText: 'Continue reading…',

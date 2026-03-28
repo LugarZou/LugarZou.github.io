@@ -74,7 +74,7 @@ const PubPosts = [
         imageWidth: 400,
         imageLabel: 'Image Text',
         published_where: "RLDM 2025 Spotlight",
-        ref_address: "https://github.com/LugarZou/LugarZou.github.io/blob/master/src/Images/RLDMCamera_ready.pdf",
+        ref_address: "https://github.com/LugarZou/LugarZou.github.io/blob/master/src/Images/RLDMCamera_ready.pdf?raw=true",
     },
     {
         title: 'RDBench: ML Benchmark for Relational Databases',

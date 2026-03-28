@@ -3,11 +3,11 @@ import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import selfPic from '../../Images/PosterPic.png';
+import selfPic from '../../Images/CuttedNewPhoto.png';
 
 interface MainFeaturedPostProps {
   post: {
-    description: string;
+    description: React.ReactNode;
     imageText: string;
     linkText: string;
     title: string;
@@ -73,7 +73,15 @@ export default function MainFeaturedPost(props: MainFeaturedPostProps) {
             }}
           >
             <img
-              style={{ display: 'block', maxWidth: '100%', maxHeight: '100%', width: 'auto', height: 'auto' }}
+              style={{
+                display: 'block',
+                width: '100%',
+                maxWidth: '520px',
+                maxHeight: '960px',
+                height: 'auto',
+                objectFit: 'contain',
+                margin: '0 auto',
+              }}
               src={selfPic}
               alt={post.imageText}
             />

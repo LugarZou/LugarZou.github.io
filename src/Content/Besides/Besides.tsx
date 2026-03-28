@@ -4,6 +4,7 @@ import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import MediaControlCard from './MediaCard';
+import AlbumCard from './AlbumCard';
 
 const Besides: React.FC = () => {
     return (
@@ -11,7 +12,7 @@ const Besides: React.FC = () => {
             <Typography variant="h3" gutterBottom align="center">
                 此外 Besides
             </Typography>
-            <Grid container spacing={2} justifyContent="center" alignItems="stretch">
+            <Grid container spacing={2} justifyContent="center" alignItems="flex-start">
                 <Grid item xs={12} md={4} sx={{ mt: 0 }}>
                     <Paper elevation={2} sx={{ p: 2, height: '100%' }}>
                         <Typography variant="h6">
@@ -22,6 +23,9 @@ const Besides: React.FC = () => {
                 </Grid>
                 <Grid item xs={12} md={5} sx={{ mt: 6 }}>
                     <MediaControlCard />
+                </Grid>
+                <Grid item xs={12} md={5} sx={{ mt: 2, display: 'flex', justifyContent: 'flex-end', pr: 1 }}>
+                    <AlbumCard />
                 </Grid>
                 {/* <Grid item xs={12} md={5} sx={{ mt: 4 }}>
                     <Paper elevation={1} sx={{ p: 2, height: '100%' }}>
@@ -37,7 +41,7 @@ const Besides: React.FC = () => {
                     </Paper>
                 </Grid> */}
                 <Grid item xs={12} md={6} sx={{ mt: 2 }}>
-                    <Paper elevation={1} sx={{ p: 2, height: '100%' }}>
+                    <Paper elevation={1} sx={{ p: 2 }}>
                         <Typography variant="h5">春风夜雨 Friends</Typography>
                         <Typography variant="body1" color="text.secondary">
                             山谷这两句诗早就给人用滥了，奈何写得太好，实在不能割舍。未共醉春风者谈论当时夜雨多少显得虚伪，而无孤灯挑尽之思者到底流于轻浮。率意独驾，不由径路，幸与诸君历久，未效穷途之哭。<br />

@@ -3,6 +3,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import SearchIcon from '@mui/icons-material/Search';
+import SchoolIcon from '@mui/icons-material/School';
 import Typography from '@mui/material/Typography';
 import { Link as RouterLink} from 'react-router-dom';
 import Link from '@mui/material/Link';
@@ -17,6 +18,7 @@ interface HeaderProps {
 
 export default function Header(props: HeaderProps) {
   const { sections, title } = props;
+  const scholarUrl = 'https://scholar.google.com/citations?user=rWwSkGoAAAAJ&hl=en';
 
   return (
     <React.Fragment>
@@ -32,6 +34,15 @@ export default function Header(props: HeaderProps) {
         >
           {title}
         </Typography>
+        <IconButton
+          component="a"
+          href={scholarUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Google Scholar"
+        >
+          <SchoolIcon />
+        </IconButton>
         <IconButton>
           <SearchIcon />
         </IconButton>

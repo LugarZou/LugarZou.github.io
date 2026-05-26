@@ -10,6 +10,7 @@ import CV from './Content/CV/CV';
 import Overview from './Content/Overview/Overview';
 import Showcase from './Content/Showcase/Showcase';
 import Besides from './Content/Besides/Besides';
+import Works from './Content/Works/Works';
 
 const AppRouter = createBrowserRouter([
     {
@@ -19,6 +20,10 @@ const AppRouter = createBrowserRouter([
             {
                 path: "CV",
                 element: <CV />,
+            },
+            {
+                path: "works",
+                element: <Works />,
             },
             {
                 path: "/",

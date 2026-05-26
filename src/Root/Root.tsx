@@ -8,7 +8,8 @@ import background from '../Images/Background_alex_suprun.jpg';
 
 const sections = [
   { title: 'Overview', url: '/' },
-  { title: 'Cirriculum Vitae', url: 'CV' },
+  { title: 'Curriculum Vitae', url: 'CV' },
+  { title: 'Works', url: 'works' },
   /*{ title: 'Showcase', url: 'Showcase' },
   { title: 'Working Ethics', url: '#' },*/
   { title: 'Besides', url: 'besides' }

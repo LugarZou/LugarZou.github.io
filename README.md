@@ -229,6 +229,10 @@ AlbumPhoto3.webp
 
 `AlbumCard.tsx` 使用 Webpack 的 `require.context` 自动收集 `AlbumPhoto*.(png|jpg|jpeg|webp)`，并按文件名中的数字排序，无需逐张导入。相册封面由 `bird_zhangdaqian.jpg` 提供。
 
+### 更新图文集
+
+图文弹窗的内容保存在 `src/Content/Besides/StoryCard.tsx` 的 `storySlides` 数组中。每一页包含图片、图片替代文字、标题以及中英文正文；新增或替换图文时，同时更新顶部的图片导入和对应数组项即可。
+
 ### 更新音乐
 
 1. 将音频文件加入 `src/Music/`。

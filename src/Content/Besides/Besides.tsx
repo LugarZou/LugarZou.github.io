@@ -5,6 +5,7 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import MediaControlCard from './MediaCard';
 import AlbumCard from './AlbumCard';
+import StoryCard from './StoryCard';
 
 const Besides: React.FC = () => {
     return (
@@ -27,20 +28,13 @@ const Besides: React.FC = () => {
                 <Grid item xs={12} md={5} sx={{ mt: 2, display: 'flex', justifyContent: 'flex-end', pr: 1 }}>
                     <AlbumCard />
                 </Grid>
-                {/* <Grid item xs={12} md={5} sx={{ mt: 4 }}>
-                    <Paper elevation={1} sx={{ p: 2, height: '100%' }}>
-                        <Typography variant="h5">以恒 Stick to</Typography>
-                        <Typography variant="body1" color="text.secondary">
-                            说来又私人又像自夸，但实是我挣扎坚持之事。只求落于文字，心下清明。<br />
-                            This is both personal and a bit boastful, but it is something I struggle to stick to. I just want to put it into words so it's clear in my mind.<br />
-                        </Typography>
-                        <Typography variant="body1" color="text.secondary">
-                            - 限饮：从2025年5月26日19时46分开始，我只喝水、茶、咖啡、牛奶、椰子水、纯果汁。<br />
-                            - Beverage Limit: Starting from May 26, 2025, at 19:46, I will only drink water, tea, coffee, milk, coconut water and 100% juice.<br />
-                        </Typography>
-                    </Paper>
-                </Grid> */}
-                <Grid item xs={12} md={6} sx={{ mt: 2 }}>
+                <Grid
+                    item
+                    xs={12}
+                    md={5}
+                    sx={{ mt: 2, display: 'flex', flexDirection: 'column', gap: 2 }}
+                >
+                    <StoryCard />
                     <Paper elevation={1} sx={{ p: 2 }}>
                         <Typography variant="h5">春风夜雨 Friends</Typography>
                         <Typography variant="body1" color="text.secondary">
@@ -54,6 +48,19 @@ const Besides: React.FC = () => {
                         </Typography>
                     </Paper>
                 </Grid>
+                {/* <Grid item xs={12} md={5} sx={{ mt: 4 }}>
+                    <Paper elevation={1} sx={{ p: 2, height: '100%' }}>
+                        <Typography variant="h5">以恒 Stick to</Typography>
+                        <Typography variant="body1" color="text.secondary">
+                            说来又私人又像自夸，但实是我挣扎坚持之事。只求落于文字，心下清明。<br />
+                            This is both personal and a bit boastful, but it is something I struggle to stick to. I just want to put it into words so it's clear in my mind.<br />
+                        </Typography>
+                        <Typography variant="body1" color="text.secondary">
+                            - 限饮：从2025年5月26日19时46分开始，我只喝水、茶、咖啡、牛奶、椰子水、纯果汁。<br />
+                            - Beverage Limit: Starting from May 26, 2025, at 19:46, I will only drink water, tea, coffee, milk, coconut water and 100% juice.<br />
+                        </Typography>
+                    </Paper>
+                </Grid> */}
             </Grid>
         </Box>
     );

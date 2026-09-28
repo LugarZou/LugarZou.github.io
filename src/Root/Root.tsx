@@ -29,7 +29,7 @@ export default function Root() {
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          height: "100vh",
+          minHeight: "100vh",
         }}
       >
         <Header title="Lutong Zou" sections={sections} />

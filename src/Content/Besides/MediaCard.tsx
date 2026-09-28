@@ -85,15 +85,38 @@ export default function MediaControlCard() {
     }, [trackIndex]);
 
     return (
-        <Card sx={{ display: 'flex', mt: 4 }}>
-            {/* 左侧描述区 */}
-            <Box sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', p: 2, minWidth: 180 }}>
+        <Card
+            sx={{
+                display: 'flex',
+                flexDirection: { xs: 'column', sm: 'row' },
+                mt: 4,
+                width: { xs: '100%', sm: 'fit-content' },
+                maxWidth: '100%',
+            }}
+        >
+            {/* 标题区 */}
+            <Box
+                sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center',
+                    alignItems: { xs: 'center', sm: 'flex-start' },
+                    p: 2,
+                    minWidth: { xs: 0, sm: 180 },
+                }}
+            >
                 <Typography variant="h5" gutterBottom>
                     音乐 Music
                 </Typography>
             </Box>
             {/* 播放器区 */}
-            <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+            <Box
+                sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: { xs: 'center', sm: 'stretch' },
+                }}
+            >
                 <CardContent sx={{ flex: '1 0 auto' }}>
                     <Typography component="div" variant="h5">
                         {tracks[trackIndex].title}
@@ -129,7 +152,11 @@ export default function MediaControlCard() {
             </Box>
             <CardMedia
                 component="img"
-                sx={{ width: 151 }}
+                sx={{
+                    width: { xs: '100%', sm: 151 },
+                    height: { xs: 180, sm: 'auto' },
+                    objectFit: 'cover',
+                }}
                 image={tracks[trackIndex].cover}
                 alt={tracks[trackIndex].title + ' cover'}
             />

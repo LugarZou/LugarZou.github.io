@@ -59,7 +59,8 @@
 | `@types/jest` | `^27.5.2` | Jest 测试 API 的类型声明 |
 | `@types/markdown-to-jsx` | `^7.0.1` | Markdown 组件的补充类型声明 |
 | `@types/react-router-dom` | `^5.3.3` | React Router DOM 的旧版补充类型包；当前应用代码实际使用 v6 API |
-| `gh-pages` | `^5.0.0` | 将 `build/` 发布到 GitHub Pages，唯一的 `devDependency` |
+| `@babel/plugin-proposal-private-property-in-object` | `^7.21.11` | 兼容 CRA/Babel 的依赖声明缺失问题，避免开发服务器启动警告 |
+| `gh-pages` | `^5.0.0` | 将 `build/` 发布到 GitHub Pages |
 
 依赖的准确版本以 `package-lock.json` 为准。仓库没有通过 `.nvmrc` 或 `package.json#engines` 固定 Node.js 版本。
 

@@ -231,7 +231,7 @@ AlbumPhoto3.webp
 
 ### 更新图文集
 
-图文弹窗的内容保存在 `src/Content/Besides/StoryCard.tsx` 的 `storySlides` 数组中。每一页包含标题和中英文正文，也可以按需提供图片与图片替代文字；新增或替换图文时，更新顶部的图片导入和对应数组项即可。
+图文弹窗的内容保存在 `src/Content/Besides/StoryCard.tsx` 的 `storySlides` 数组中。每一页包含 `title` 和中英文正文，也可以按需提供图片与图片替代文字；`title` 为空字符串时不会渲染标题。新增或替换图文时，更新顶部的图片导入和对应数组项即可。
 
 ### 更新音乐
 

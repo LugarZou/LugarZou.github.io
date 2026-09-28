@@ -29,19 +29,19 @@ const storySlides: StorySlide[] = [
     {
         image: storyImage1,
         imageAlt: '图文集示例图片一',
-        title: '片段一 Fragment I',
+        title: '',
         textZh: '这里可以放与这张图片对应的中文文字。',
         textEn: 'English text associated with this image can be placed here.',
     },
     {
         image: storyImage2,
         imageAlt: '图文集示例图片二',
-        title: '片段二 Fragment II',
+        title: '',
         textZh: '每一页都可以使用不同长度的文字，弹窗内容会自动适应。',
         textEn: 'Each page can contain text of a different length, and the dialog will adapt.',
     },
     {
-        title: '片段三 Fragment III',
+        title: '纯文字页 Text-only Page',
         textZh: '这一页没有图片，只保留标题和文字。',
         textEn: 'This page has no image and contains only a title and text.',
     },
@@ -53,6 +53,7 @@ export default function StoryCard() {
     const theme = useTheme();
     const fullScreen = useMediaQuery(theme.breakpoints.down('sm'));
     const activeSlide = storySlides[activeStep];
+    const hasTitle = activeSlide.title.trim() !== '';
 
     const handleOpen = () => {
         setActiveStep(0);
@@ -103,7 +104,8 @@ export default function StoryCard() {
                 fullScreen={fullScreen}
                 fullWidth
                 maxWidth={activeSlide.image ? 'md' : 'sm'}
-                aria-labelledby="story-slide-title"
+                aria-labelledby={hasTitle ? 'story-slide-title' : undefined}
+                aria-label={hasTitle ? undefined : '图文内容 Story'}
                 PaperProps={{ sx: { position: 'relative', overflow: 'hidden' } }}
             >
                 <IconButton
@@ -160,9 +162,11 @@ export default function StoryCard() {
                             pb: 2,
                         }}
                     >
-                        <Typography id="story-slide-title" variant="h5" gutterBottom>
-                            {activeSlide.title}
-                        </Typography>
+                        {hasTitle && (
+                            <Typography id="story-slide-title" variant="h5" gutterBottom>
+                                {activeSlide.title}
+                            </Typography>
+                        )}
                         <Typography variant="body1" color="text.secondary">
                             {activeSlide.textZh}<br />
                             {activeSlide.textEn}

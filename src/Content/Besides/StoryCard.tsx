@@ -4,7 +4,6 @@ import Button from '@mui/material/Button';
 import ButtonBase from '@mui/material/ButtonBase';
 import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
-import DialogTitle from '@mui/material/DialogTitle';
 import IconButton from '@mui/material/IconButton';
 import MobileStepper from '@mui/material/MobileStepper';
 import Paper from '@mui/material/Paper';
@@ -17,11 +16,10 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 
 import storyImage1 from '../../Images/AlbumPhoto1.png';
 import storyImage2 from '../../Images/AlbumPhoto2.png';
-import storyImage3 from '../../Images/AlbumPhoto3.png';
 
 type StorySlide = {
-    image: string;
-    imageAlt: string;
+    image?: string;
+    imageAlt?: string;
     title: string;
     textZh: string;
     textEn: string;
@@ -43,11 +41,9 @@ const storySlides: StorySlide[] = [
         textEn: 'Each page can contain text of a different length, and the dialog will adapt.',
     },
     {
-        image: storyImage3,
-        imageAlt: '图文集示例图片三',
         title: '片段三 Fragment III',
-        textZh: '这些图片和文字目前用于展示交互，之后可以直接替换。',
-        textEn: 'These images and captions currently demonstrate the interaction and can be replaced later.',
+        textZh: '这一页没有图片，只保留标题和文字。',
+        textEn: 'This page has no image and contains only a title and text.',
     },
 ];
 
@@ -106,47 +102,65 @@ export default function StoryCard() {
                 onKeyDown={handleKeyDown}
                 fullScreen={fullScreen}
                 fullWidth
-                maxWidth="md"
-                aria-labelledby="story-dialog-title"
+                maxWidth={activeSlide.image ? 'md' : 'sm'}
+                aria-labelledby="story-slide-title"
+                PaperProps={{ sx: { position: 'relative', overflow: 'hidden' } }}
             >
-                <DialogTitle
-                    id="story-dialog-title"
-                    sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}
+                <IconButton
+                    onClick={handleClose}
+                    aria-label="关闭 Close"
+                    sx={{
+                        position: 'absolute',
+                        top: 8,
+                        right: 8,
+                        zIndex: 1,
+                        bgcolor: 'rgba(255, 255, 255, 0.88)',
+                        '&:hover': { bgcolor: 'rgba(255, 255, 255, 1)' },
+                    }}
                 >
-                    图文集 Stories
-                    <IconButton onClick={handleClose} aria-label="关闭 Close">
-                        <CloseIcon />
-                    </IconButton>
-                </DialogTitle>
+                    <CloseIcon />
+                </IconButton>
 
-                <DialogContent dividers sx={{ p: 0 }}>
+                <DialogContent sx={{ p: 0 }}>
+                    {activeSlide.image && (
+                        <Box
+                            sx={{
+                                display: 'flex',
+                                alignItems: 'center',
+                                justifyContent: 'center',
+                                minHeight: { xs: 280, sm: 420 },
+                                p: { xs: 1, sm: 2 },
+                                bgcolor: 'grey.100',
+                            }}
+                        >
+                            <Box
+                                component="img"
+                                src={activeSlide.image}
+                                alt={activeSlide.imageAlt ?? ''}
+                                sx={{
+                                    display: 'block',
+                                    maxWidth: '100%',
+                                    width: 'auto',
+                                    height: { xs: '42vh', sm: '56vh' },
+                                    maxHeight: 620,
+                                    objectFit: 'contain',
+                                }}
+                            />
+                        </Box>
+                    )}
+
                     <Box
                         sx={{
                             display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            minHeight: { xs: 280, sm: 420 },
-                            p: { xs: 1, sm: 2 },
-                            bgcolor: 'grey.100',
+                            flexDirection: 'column',
+                            justifyContent: activeSlide.image ? 'flex-start' : 'center',
+                            minHeight: activeSlide.image ? 'auto' : { xs: '100%', sm: 280 },
+                            px: { xs: 2, sm: 3 },
+                            pt: activeSlide.image ? 2 : { xs: 8, sm: 6 },
+                            pb: 2,
                         }}
                     >
-                        <Box
-                            component="img"
-                            src={activeSlide.image}
-                            alt={activeSlide.imageAlt}
-                            sx={{
-                                display: 'block',
-                                maxWidth: '100%',
-                                width: 'auto',
-                                height: { xs: '42vh', sm: '56vh' },
-                                maxHeight: 620,
-                                objectFit: 'contain',
-                            }}
-                        />
-                    </Box>
-
-                    <Box sx={{ px: { xs: 2, sm: 3 }, py: 2 }}>
-                        <Typography variant="h5" gutterBottom>
+                        <Typography id="story-slide-title" variant="h5" gutterBottom>
                             {activeSlide.title}
                         </Typography>
                         <Typography variant="body1" color="text.secondary">

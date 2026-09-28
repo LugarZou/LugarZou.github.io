@@ -91,10 +91,6 @@ export default function MediaControlCard() {
                 <Typography variant="h5" gutterBottom>
                     音乐 Music
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
-                    我喜欢听的音乐很杂，浪漫主义、粤语等不一而足。<br />
-                    I enjoy a wide variety of music, from Romanticism to Cantonese and more.<br />
-                </Typography>
             </Box>
             {/* 播放器区 */}
             <Box sx={{ display: 'flex', flexDirection: 'column' }}>

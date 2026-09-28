@@ -14,7 +14,7 @@ import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
-import storyImage1 from '../../Images/AlbumPhoto1.png';
+import dongtouSeaImage from '../../Images/DongtouSea.png';
 import storyImage2 from '../../Images/AlbumPhoto2.png';
 
 type StorySlide = {
@@ -27,11 +27,11 @@ type StorySlide = {
 
 const storySlides: StorySlide[] = [
     {
-        image: storyImage1,
-        imageAlt: '图文集示例图片一',
+        image: dongtouSeaImage,
+        imageAlt: '洞头海边咖啡馆窗前的咖啡、面包与花',
         title: '',
-        textZh: '这里可以放与这张图片对应的中文文字。',
-        textEn: 'English text associated with this image can be placed here.',
+        textZh: '家住海西头 闲坐望天涯\n明日海东去 天涯即是家\n与父母往洞头望海 念不及旬日便赴加州 作此以记\n丙午年七月初四于洞头甜梦咖啡',
+        textEn: '',
     },
     {
         image: storyImage2,
@@ -167,9 +167,14 @@ export default function StoryCard() {
                                 {activeSlide.title}
                             </Typography>
                         )}
-                        <Typography variant="body1" color="text.secondary">
-                            {activeSlide.textZh}<br />
-                            {activeSlide.textEn}
+                        <Typography variant="body1" color="text.secondary" sx={{ whiteSpace: 'pre-line' }}>
+                            {activeSlide.textZh}
+                            {activeSlide.textEn && (
+                                <>
+                                    <br />
+                                    {activeSlide.textEn}
+                                </>
+                            )}
                         </Typography>
 
                         <MobileStepper

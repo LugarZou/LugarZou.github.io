@@ -82,7 +82,7 @@ export default function CV() {
                                         <Typography variant="h4" style={{ marginLeft: '10px' }}>Personal Info</Typography>
                                     </Grid>
                                     <Typography variant="subtitle1">
-                                        Address: Beijing, China
+                                        Address: Boston, MA
                                         <br />
                                         Email: xjqrxjqr@gmail.com
                                     </Typography>

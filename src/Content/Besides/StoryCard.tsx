@@ -15,7 +15,6 @@ import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
 import dongtouSeaImage from '../../Images/DongtouSea.png';
-import storyImage2 from '../../Images/AlbumPhoto2.png';
 
 type StorySlide = {
     image?: string;
@@ -32,18 +31,6 @@ const storySlides: StorySlide[] = [
         title: '',
         textZh: '家住海西头 闲坐望天涯\n明日海东去 天涯即是家\n与父母往洞头望海 念不及旬日便赴加州 作此以记\n丙午年七月初四于洞头甜梦咖啡',
         textEn: '',
-    },
-    {
-        image: storyImage2,
-        imageAlt: '图文集示例图片二',
-        title: '',
-        textZh: '每一页都可以使用不同长度的文字，弹窗内容会自动适应。',
-        textEn: 'Each page can contain text of a different length, and the dialog will adapt.',
-    },
-    {
-        title: '纯文字页 Text-only Page',
-        textZh: '这一页没有图片，只保留标题和文字。',
-        textEn: 'This page has no image and contains only a title and text.',
     },
 ];
 
@@ -89,10 +76,10 @@ export default function StoryCard() {
                 sx={{ display: 'block', width: '100%', borderRadius: 1, textAlign: 'left' }}
             >
                 <Paper elevation={1} sx={{ p: 2, width: '100%' }}>
-                    <Typography variant="h5">图文集 Stories</Typography>
+                    <Typography variant="h5">有文有笔</Typography>
                     <Typography variant="body1" color="text.secondary">
-                        图片与文字的片段，点击翻阅。<br />
-                        Images and the words that accompany them.
+                        “今之常言，有文有笔，以为无韵者笔也，有韵者文也。”<br/>
+                        《文心雕龙·总术》南朝梁 刘勰
                     </Typography>
                 </Paper>
             </ButtonBase>

@@ -4,18 +4,18 @@
 
 项目基于 Create React App、React 18 和 TypeScript 构建，使用 Material UI 组织界面，通过 React Router 实现单页应用路由，并部署至 GitHub Pages。
 
-- 站点地址：<https://LugarZou.github.io>
-- 源码仓库：<https://github.com/LugarZou/LugarZou.github.io>
+- 站点地址：[https://LugarZou.github.io](https://LugarZou.github.io)
+- 源码仓库：[https://github.com/LugarZou/LugarZou.github.io](https://github.com/LugarZou/LugarZou.github.io)
 
 ## 页面与功能
 
-| 路径 | 页面 | 主要内容 |
-| --- | --- | --- |
-| `/` | Overview | 首页欢迎语、研究兴趣和个人照片 |
-| `/CV` | Curriculum Vitae | 个人信息、教育经历、研究经历、语言、奖项和技术工具 |
-| `/works` | Works | 按研究方向组织的论文、预印本、Workshop 工作与项目 |
-| `/besides` | Besides | 中英文个人介绍、音乐播放器、相册与朋友相关内容 |
-| `/Showcase` | Showcase | 技能主题图片墙；路由仍然有效，但入口目前从顶部导航中隐藏 |
+| 路径          | 页面             | 主要内容                                                 |
+| ------------- | ---------------- | -------------------------------------------------------- |
+| `/`         | Overview         | 首页欢迎语、研究兴趣和个人照片                           |
+| `/CV`       | Curriculum Vitae | 个人信息、教育经历、研究经历、语言、奖项和技术工具       |
+| `/works`    | Works            | 按研究方向组织的论文、预印本、Workshop 工作与项目        |
+| `/besides`  | Besides          | 中英文个人介绍、音乐播放器、相册与朋友相关内容           |
+| `/Showcase` | Showcase         | 技能主题图片墙；路由仍然有效，但入口目前从顶部导航中隐藏 |
 
 顶部栏提供站内导航和 Google Scholar 链接；所有页面共享背景、页头和页脚。
 
@@ -23,44 +23,44 @@
 
 ### 核心框架
 
-| Package | 版本 | 用途 |
-| --- | --- | --- |
-| `react` | `^18.2.0` | 组件与状态管理基础 |
-| `react-dom` | `^18.2.0` | 将 React 应用挂载到浏览器 DOM |
-| `typescript` | `^4.9.5` | 静态类型检查与 TSX 支持 |
-| `react-router-dom` | `^6.18.0` | 使用 `createBrowserRouter`、嵌套路由和 `<Outlet>` 组织页面 |
-| `react-scripts` | `5.0.1` | Create React App 提供的开发服务器、Webpack/Babel 构建、测试和 ESLint 配置 |
+| Package              | 版本        | 用途                                                                      |
+| -------------------- | ----------- | ------------------------------------------------------------------------- |
+| `react`            | `^18.2.0` | 组件与状态管理基础                                                        |
+| `react-dom`        | `^18.2.0` | 将 React 应用挂载到浏览器 DOM                                             |
+| `typescript`       | `^4.9.5`  | 静态类型检查与 TSX 支持                                                   |
+| `react-router-dom` | `^6.18.0` | 使用`createBrowserRouter`、嵌套路由和 `<Outlet>` 组织页面             |
+| `react-scripts`    | `5.0.1`   | Create React App 提供的开发服务器、Webpack/Babel 构建、测试和 ESLint 配置 |
 
 ### UI 与样式
 
-| Package | 版本 | 用途 |
-| --- | --- | --- |
-| `@mui/material` | `^5.14.17` | 页面布局、排版、卡片、弹窗、列表等主要 UI 组件 |
-| `@mui/icons-material` | `^5.13.7` | 导航、履历、播放控制等图标 |
-| `@mui/lab` | `^5.0.0-alpha.152` | CV 页面中的时间线组件 |
-| `@emotion/react` | `^11.11.1` | MUI 默认 CSS-in-JS 运行时 |
-| `@emotion/styled` | `^11.11.0` | MUI `styled()` 组件样式支持 |
-| `@react-spring/web` | `^9.7.3` | Web 动画库；已安装，但当前源码中没有直接使用 |
+| Package                 | 版本                 | 用途                                           |
+| ----------------------- | -------------------- | ---------------------------------------------- |
+| `@mui/material`       | `^5.14.17`         | 页面布局、排版、卡片、弹窗、列表等主要 UI 组件 |
+| `@mui/icons-material` | `^5.13.7`          | 导航、履历、播放控制等图标                     |
+| `@mui/lab`            | `^5.0.0-alpha.152` | CV 页面中的时间线组件                          |
+| `@emotion/react`      | `^11.11.1`         | MUI 默认 CSS-in-JS 运行时                      |
+| `@emotion/styled`     | `^11.11.0`         | MUI`styled()` 组件样式支持                   |
+| `@react-spring/web`   | `^9.7.3`           | Web 动画库；已安装，但当前源码中没有直接使用   |
 
 页面主要采用 MUI 的 `sx`、主题与响应式断点进行样式组织。`public/index.html` 还从 Google Fonts 加载了 Playfair Display 和 Parisienne 字体。
 
 ### 内容、测试与工具
 
-| Package | 版本 | 用途 |
-| --- | --- | --- |
-| `markdown-to-jsx` | `^7.2.1` | Markdown 到 React 组件的转换；目前只被 `src/NotUsedNow/` 中的备用组件使用 |
-| `web-vitals` | `^2.1.4` | CRA 默认的页面性能指标采集入口；当前未传入上报函数 |
-| `@testing-library/react` | `^13.4.0` | React 组件测试与渲染 |
-| `@testing-library/jest-dom` | `^5.16.5` | DOM 断言扩展 |
-| `@testing-library/user-event` | `^13.5.0` | 测试中的用户交互模拟 |
-| `@types/react` | `^18.2.14` | React 的 TypeScript 类型声明 |
-| `@types/react-dom` | `^18.2.6` | React DOM 的 TypeScript 类型声明 |
-| `@types/node` | `^16.18.38` | Node.js API 与构建环境的类型声明 |
-| `@types/jest` | `^27.5.2` | Jest 测试 API 的类型声明 |
-| `@types/markdown-to-jsx` | `^7.0.1` | Markdown 组件的补充类型声明 |
-| `@types/react-router-dom` | `^5.3.3` | React Router DOM 的旧版补充类型包；当前应用代码实际使用 v6 API |
-| `@babel/plugin-proposal-private-property-in-object` | `^7.21.11` | 兼容 CRA/Babel 的依赖声明缺失问题，避免开发服务器启动警告 |
-| `gh-pages` | `^5.0.0` | 将 `build/` 发布到 GitHub Pages |
+| Package                                               | 版本          | 用途                                                                       |
+| ----------------------------------------------------- | ------------- | -------------------------------------------------------------------------- |
+| `markdown-to-jsx`                                   | `^7.2.1`    | Markdown 到 React 组件的转换；目前只被`src/NotUsedNow/` 中的备用组件使用 |
+| `web-vitals`                                        | `^2.1.4`    | CRA 默认的页面性能指标采集入口；当前未传入上报函数                         |
+| `@testing-library/react`                            | `^13.4.0`   | React 组件测试与渲染                                                       |
+| `@testing-library/jest-dom`                         | `^5.16.5`   | DOM 断言扩展                                                               |
+| `@testing-library/user-event`                       | `^13.5.0`   | 测试中的用户交互模拟                                                       |
+| `@types/react`                                      | `^18.2.14`  | React 的 TypeScript 类型声明                                               |
+| `@types/react-dom`                                  | `^18.2.6`   | React DOM 的 TypeScript 类型声明                                           |
+| `@types/node`                                       | `^16.18.38` | Node.js API 与构建环境的类型声明                                           |
+| `@types/jest`                                       | `^27.5.2`   | Jest 测试 API 的类型声明                                                   |
+| `@types/markdown-to-jsx`                            | `^7.0.1`    | Markdown 组件的补充类型声明                                                |
+| `@types/react-router-dom`                           | `^5.3.3`    | React Router DOM 的旧版补充类型包；当前应用代码实际使用 v6 API             |
+| `@babel/plugin-proposal-private-property-in-object` | `^7.21.11`  | 兼容 CRA/Babel 的依赖声明缺失问题，避免开发服务器启动警告                  |
+| `gh-pages`                                          | `^5.0.0`    | 将`build/` 发布到 GitHub Pages                                           |
 
 依赖的准确版本以 `package-lock.json` 为准。仓库没有通过 `.nvmrc` 或 `package.json#engines` 固定 Node.js 版本。
 
@@ -156,7 +156,7 @@ npm ci
 npm start
 ```
 
-默认访问 <http://localhost:3000>。源码改动后页面会自动刷新，类型或 ESLint 问题会显示在终端和浏览器中。
+默认访问 [http://localhost:3000](http://localhost:3000)。源码改动后页面会自动刷新，类型或 ESLint 问题会显示在终端和浏览器中。
 
 ### 3. 执行测试
 
@@ -182,10 +182,10 @@ npm run build
 
 ### 其他脚本
 
-| 命令 | 说明 |
-| --- | --- |
-| `npm run deploy` | 先自动执行 `predeploy`（即 `npm run build`），再用 `gh-pages -d build` 发布 |
-| `npm run eject` | 将 CRA 隐藏的构建配置复制到仓库；这是不可逆操作，通常无需执行 |
+| 命令               | 说明                                                                             |
+| ------------------ | -------------------------------------------------------------------------------- |
+| `npm run deploy` | 先自动执行`predeploy`（即 `npm run build`），再用 `gh-pages -d build` 发布 |
+| `npm run eject`  | 将 CRA 隐藏的构建配置复制到仓库；这是不可逆操作，通常无需执行                    |
 
 ## 内容维护指南
 

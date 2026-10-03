@@ -15,6 +15,7 @@ import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
 import dongtouSeaImage from '../../Images/DongtouSea.png';
+import baoanAirportImage from '../../Images/260617宝安机场.png';
 
 type StorySlide = {
     image?: string;
@@ -28,6 +29,13 @@ const storySlides: StorySlide[] = [
     {
         title: '乙巳十月十四作七律咏今年事',
         textZh: '何忧岸谷系离舟 应喜还乡未白头\n且御金觞从旧友 莫凭冷月赋新愁\n风流逸少千秋圣 丘壑深猷一县侯\n快买桂花同载酒 花间晚照与君留',
+        textEn: '',
+    },
+    {
+        image: baoanAirportImage,
+        imageAlt: '深圳宝安机场内的面包与咖啡',
+        title: '',
+        textZh: '以出差深圳之便 早至两日访旧 而雨雾氤氲 加之白日烈烈 如在蒸笼之中 便得见旧友 意觉缺缺 丙午六月初四晚飞离深圳 又暴雨致误 以其隙作此\n\n访旧薄游南海岸\n万山渡尽雨来拦\n乌云无计重年少\n不许相逢是晴天',
         textEn: '',
     },
     {

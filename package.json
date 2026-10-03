@@ -19,6 +19,8 @@
     "@types/react": "^18.2.14",
     "@types/react-dom": "^18.2.6",
     "@types/react-router-dom": "^5.3.3",
+    "baseline-browser-mapping": "^2.11.27",
+    "caniuse-lite": "^1.0.30001814",
     "markdown-to-jsx": "^7.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

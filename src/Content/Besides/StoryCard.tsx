@@ -32,6 +32,11 @@ const storySlides: StorySlide[] = [
         textZh: '家住海西头 闲坐望天涯\n明日海东去 天涯即是家\n与父母往洞头望海 念不及旬日便赴加州 作此以记\n丙午年七月初四于洞头甜梦咖啡',
         textEn: '',
     },
+    {
+        title: '乙巳十月十四作七律咏今年事',
+        textZh: '何忧岸谷系离舟 应喜还乡未白头\n且御金觞从旧友 莫凭冷月赋新愁\n风流逸少千秋圣 丘壑深猷一县侯\n快买桂花同载酒 花间晚照与君留',
+        textEn: '',
+    },
 ];
 
 export default function StoryCard() {

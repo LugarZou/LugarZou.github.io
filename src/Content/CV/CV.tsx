@@ -84,7 +84,7 @@ export default function CV() {
                                     <Typography variant="subtitle1">
                                         Address: Boston, MA
                                         <br />
-                                        Email: xjqrxjqr@gmail.com
+                                        Email: lzou@fas.harvard.edu
                                     </Typography>
                                 </Grid>
 

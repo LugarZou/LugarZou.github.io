@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="text-scale" content="scale" />
+		<link href="./_app/immutable/entry/start.2MclMDen.js" rel="modulepreload">
+		<link href="./_app/immutable/chunks/BsaP4aKi.js" rel="modulepreload">
+		<link href="./_app/immutable/chunks/B4M_k492.js" rel="modulepreload">
+		<link href="./_app/immutable/entry/app.DTsQUdBo.js" rel="modulepreload">
+		<link href="./_app/immutable/chunks/xihTtKlq.js" rel="modulepreload">
+		<link href="./_app/immutable/nodes/0.DFiOqOCU.js" rel="modulepreload">
+		<link href="./_app/immutable/chunks/mIqqjif5.js" rel="modulepreload">
+		<link href="./_app/immutable/nodes/2.DMmesbXG.js" rel="modulepreload">
+		
+		<link href="./_app/immutable/assets/0.Diu6iWtu.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/2.MjwU13FM.css" rel="stylesheet">
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents"><!--[--><!--[0--><!--[--><div class="viz shell svelte-12qhfyh"><header class="svelte-12qhfyh"><div><h1 class="svelte-12qhfyh">CS1710 · Milestone 6 — Interactive Dashboard Prototypes</h1> <p class="svelte-12qhfyh">Spotify 2015–2025 (synthetic, Kaggle) · 85,000 tracks · audience: label scouting analysts</p></div> <nav class="svelte-12qhfyh"><a href="./" class="svelte-12qhfyh">Index</a> <a href="./a" class="svelte-12qhfyh">Prototype A</a> <a href="./b" class="svelte-12qhfyh">Prototype B</a></nav></header> <!--[--><h2 class="svelte-1uha8ag">Two ways to wire the same three views together</h2> <p class="svelte-1uha8ag">Milestone 6 asks whether coordinating views actually helps our audience — label scouting analysts —
+	investigate the data. Both prototypes combine the same three selected sketches and chase the same
+	question:</p> <blockquote class="svelte-1uha8ag">Which country × genre should a scout invest in, and is that cell's advantage a higher general
+	level (repeatable) or a couple of runaway hits (not repeatable)?</blockquote> <dl><dt class="svelte-1uha8ag"><a href="./a" class="svelte-1uha8ag">Prototype A — discrete drill-down</a></dt> <dd class="svelte-1uha8ag">The heatmap is the control. One click selects a cell, a country row, or a genre column; the
+		noise ring and the stadium rebuild for exactly that subset. Easy to read, one subset at a time,
+		no way to compare two selections.</dd> <dt class="svelte-1uha8ag"><a href="./b" class="svelte-1uha8ag">Prototype B — brushing and linking, plus a shared year filter</a></dt> <dd class="svelte-1uha8ag">The ring is promoted to 120 country × genre points and becomes the control. Brushing a region
+		selects a <em>set</em> of cells, and the heatmap shows where that set lives. A shared year range
+		drives both views.</dd></dl> <h3 class="svelte-1uha8ag">Views used (from the four sketches selected in Milestone 4)</h3> <ul><li class="svelte-1uha8ag"><b>JD-1</b> country × genre heatmap (Jialing, Q3) — locates opportunity</li> <li class="svelte-1uha8ag"><b>JY-1</b> standard-error ring (James, Q1) — tests whether the edge beats chance</li> <li class="svelte-1uha8ag"><b>JY-5</b> stadium seat grid (James, Q10) — explains who earned the streams</li></ul> <p class="note svelte-1uha8ag">JD-5 (follow-up performance by debut group) was left out: its x-axis is debut cohort, which does
+	not line up with the country × genre selection axis, so linking it would break its meaning.</p> <p class="note svelte-1uha8ag">Data is the synthetic Kaggle "Spotify Music Analytics Dataset 2015–2025", 85,000 rows. Breakout =
+	stream count at or above the global 90th percentile (59,000 streams). Aggregates are precomputed
+	by <code class="svelte-1uha8ag">build_m6_data.py</code>.</p><!--]--><!----></div><!--]--><!--]--> <!--[-1--><!--]--><!--]-->
+			
+			<script>
+				{
+					__sveltekit_cvdgl3 = {
+						base: new URL(".", location).pathname.slice(0, -1),
+						assets: "/CS1710/m6"
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("./_app/immutable/entry/start.2MclMDen.js"),
+						import("./_app/immutable/entry/app.DTsQUdBo.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 2],
+							data: [null,null],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

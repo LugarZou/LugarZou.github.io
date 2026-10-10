@@ -308,3 +308,8 @@ public/CS1710/
 ```bash
 BASE_PATH=/CS1710/m6 npm run build
 ```
+
+另外，GitHub Pages 默认跑 Jekyll，会静默忽略所有以下划线开头的目录。SvelteKit 默认把产物
+放在 `_app/`，部署后会全部 404，页面只剩预渲染的外壳。因此课程子站的 SvelteKit 项目都要在
+构建配置里把 `appDir` 改成不带下划线的名字（M6 用的是 `app`）。没有改用 `.nojekyll`，是为了
+不必把 `npm run deploy` 的 `gh-pages -d build` 改成 `--dotfiles`，以免影响主站的发布方式。

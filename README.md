@@ -287,3 +287,24 @@ npm run deploy
 页面内容与个人作品归仓库作者所有。页脚注明部分背景/主题图片来自 Unsplash 创作者 Alex Suprun、Dmytro Demidko 和 Jackson Sophat；其他素材在复用前请分别确认其来源与授权。
 
 仓库当前未提供独立的开源许可证文件。
+
+## 课程作业子站（`public/CS1710/`）
+
+CRA 会把 `public/` 下的内容原样复制进 `build/`，所以课程产物直接放在 `public/` 的子目录里即可，
+不需要经过 React 或 `scripts/postbuild.mjs` 的路由列表——`src/Router.tsx` 里没有 `/CS1710` 路由，
+GitHub Pages 遇到真实存在的静态目录会直接返回它，SPA 不参与。
+
+```
+public/CS1710/
+├─ index.html   隐藏落地页：列出各 milestone 的原型链接
+└─ m6/          Milestone 6 的 SvelteKit 构建产物
+```
+
+这个子站**不在主站导航里**，落地页带 `noindex`，只通过直接链接访问（课程助教、组员）。
+后续 milestone 按 `public/CS1710/<milestone>/` 继续往下加，并在落地页里补一张卡片。
+
+产物由课程仓库 `HarvardCourse/CS1710/` 下的项目构建，构建时必须带上子路径，例如：
+
+```bash
+BASE_PATH=/CS1710/m6 npm run build
+```
